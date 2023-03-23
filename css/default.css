@@ -1,7 +1,7 @@
 :root {
   --white: #fff;
   --black: #000;
-  --primary-btn: dodgerblue;
+  --primary-btn: #377dff;
   --font-color-light: silver;
   --font-color-dim: dimgray;
 
@@ -27,7 +27,9 @@
   --size-44: 2.75rem;
   --size-45: 2.8125rem;
   --size-50: 3.125rem;
+  --size-60: 3.75rem;
   --size-75: 4.6875rem;
+  --size-80: 5rem;
   --size-100: 6.25rem;
   --size-150: 9.375rem;
   --size-200: 12.5rem;
@@ -48,6 +50,8 @@ body { margin: 0; }
 
 main { margin: var(--size-50); }
 
+a { text-decoration: none; }
+
 .container {
   width: 1024px;
   margin-right: var(--size-50);
@@ -57,7 +61,8 @@ main { margin: var(--size-50); }
 .btn-default {
   background: var(--primary-btn);
   color: var(--white);
+  font-family: inherit;
   border: transparent;
-  border-radius: 30px;
-  padding: 15px 25px;
+  border-radius: var(--size-30);
+  padding: var(--size-15) var(--size-25);
 }

@@ -14,26 +14,107 @@ header div {
 header nav {
   display: flex;
   gap: var(--size-24);
-  color: var(--font-color-dim);
 }
 
-header div button { margin-left: 40px; }
+header nav a { color: var(--font-color-dim); }
+
+header nav div:nth-child(2) a, .learn-more a { color: #0000EE; }
+
+header div button { margin-left: var(--size-40); }
 
 /* Brand Section */
 
-.brand-statement {
+.content {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+}
+
+.brand-statement {
+  display: inline-flex;
   flex-direction: column;
+  width: var(--size-400);
+}
+
+.brand-statement h1 {
+  font-size: var(--size-50);
+  font-weight: 400;
+  margin-block: 0;
+  margin-bottom: var(--size-10);
+}
+
+.brand-statement div:first-child {
+  color: var(--font-color-dim);
+}
+
+.brand-statement .learn-more { 
+  margin-top: var(--size-25);
+  font-weight: 500;
+}
+
+.brand-statement .learn-more button { 
+  margin-right: var(--size-25);
+}
+
+.brand-statement .learn-more button i { padding-right: var(--size-10); }
+
+.empowered-apps {
+  position: relative;
   width: 450px;
+  height: 100%;
 }
 
-.brand-statement div:last-child {
-  margin-top: 25px;
-}
-
-.empowered-logo {
-  background: var(--white);
+.empowered-apps div {
+  height: var(--size-60);
+  width: var(--size-60);
+  display: flex;
+  position: absolute;
   border-radius: 50%;
+  background: white;
   border: transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 20%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 30%);
+}
+
+.empowered-apps .empowered-logo-large {
+  height: var(--size-80);
+  width: var(--size-80);
+}
+
+.empowered-apps div img {
+  background: var(--white);
+  max-width: 60%;
+  max-height: 60%;
+  margin: auto;
+}
+
+.empowered-apps div:nth-child(1) {
+  left: 5%;
+  top: 10%;
+}
+.empowered-apps div:nth-child(2) {
+  right: 50%;
+}
+
+.empowered-apps div:nth-child(3) {
+  right: 0;
+}
+
+.empowered-apps div:nth-child(4) {
+  top: 56%;
+}
+
+.empowered-apps div:nth-child(5) {
+  top: 56%;
+  right: 28%;
+}
+
+.empowered-apps div:nth-child(6) {
+  top: 83%;
+  right: 60%;
+}
+
+.empowered-apps div:nth-child(7) {
+  right: 2%;
+  top: 91%;
 }
