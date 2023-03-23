@@ -1,0 +1,39 @@
+/* Header Section */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  gap: var(--size-24);
+  color: var(--font-color-dim);
+}
+
+header div button { margin-left: 40px; }
+
+/* Brand Section */
+
+.brand-statement {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.brand-statement div:last-child {
+  margin-top: 25px;
+}
+
+.empowered-logo {
+  background: var(--white);
+  border-radius: 50%;
+  border: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 20%);
+}
