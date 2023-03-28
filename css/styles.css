@@ -1,5 +1,7 @@
 /* Header Section */
 
+section.nav-header { width: 100%; }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -93,10 +95,12 @@ header div button { margin-left: var(--size-40); }
   top: 10%;
 }
 .empowered-apps div:nth-child(2) {
+  top: 10%;
   right: 50%;
 }
 
 .empowered-apps div:nth-child(3) {
+  top: 10%;
   right: 0;
 }
 
