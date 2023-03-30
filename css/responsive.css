@@ -1,6 +1,7 @@
 @media (max-width: 1024px) {
-  main {
-    display: none;
+  section.brand .content {
+    height: 900px;
+    flex-direction: column;
   }
 
 
