@@ -1,0 +1,9 @@
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <path d="
+               M 0 0
+               L 1000 0
+               L 0 250
+               M 0 0
+              "
+fill="silver" stroke="white"></path>
+</svg>
