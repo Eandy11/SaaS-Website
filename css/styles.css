@@ -2,7 +2,7 @@
 
 .background-header {
   position: relative;
-  background-image: conic-gradient(from 200deg at 87% 0%, #f3f3f3, #e0e7ef);
+  background-image: conic-gradient(from 200deg at 77% 0%, #f3f3f3, #e0e7ef);
   padding-bottom: var(--size-200);
   z-index: -1;
 }
@@ -145,19 +145,19 @@ header div button { margin-left: var(--size-40); }
 
 /* Key Benefits Section */
 
-.section-title { 
+.key-benefits-heading { 
   text-align: center;
   margin-block: 0;
   margin-bottom: var(--size-15);
   font-size: var(--size-24);
 }
 
-.section-title div { 
+.key-benefits-heading div { 
   color: var(--font-color-dim);
   font-size: var(--size-18);
 }
 
-.section-title h3 { margin: 10px 0; }
+.key-benefits-heading h3 { margin: 10px 0; }
 
 .cards {
   display: flex;
@@ -214,7 +214,25 @@ header div button { margin-left: var(--size-40); }
 
 /* video Demo Section */
 
+.small-video-demo {
+  background: #e0e7ef42;
+  height: 450px;
+}
+
 .small-video-container {
   display: flex;
   align-items: center;
+  height: 100%;
 }
+
+.small-video-container .pitch { margin-left: var(--size-25); }
+
+.small-video-container .pitch h2 { font-weight: 500; }
+
+.small-video-container .thumbnail { align-self: flex-end; }
+
+.small-video-container .thumbnail img { 
+  max-width: 100%;
+  max-height: 100%;
+}
+
