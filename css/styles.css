@@ -87,18 +87,22 @@ header div button { margin-left: var(--size-40); }
   height: 100%;
 }
 
-.empowered-apps div {
+.empowered-apps div,
+.bubble-logo {
   height: var(--size-60);
   width: var(--size-60);
   display: flex;
-  position: absolute;
   border-radius: 50%;
   background: white;
+}
+
+.empowered-apps div {
+  position: absolute;
   border: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 30%);
 }
 
-.empowered-apps .empowered-logo-large {
+.empowered-apps .bubble-logo-large {
   height: var(--size-80);
   width: var(--size-80);
 }
@@ -166,7 +170,7 @@ header div button { margin-left: var(--size-40); }
 }
 
 .card {
-  box-shadow: 0px 0px 5px -2px;
+  box-shadow: 0 0 10px rgba(48, 63, 100, 0.15);
   text-align: left;
   border-radius: 2px;
 }
@@ -214,7 +218,7 @@ header div button { margin-left: var(--size-40); }
 
 /* video Demo Section */
 
-.small-video-demo {
+.small-video-demo/*  */ {
   background: #e0e7ef42;
   height: 450px;
 }
@@ -236,3 +240,51 @@ header div button { margin-left: var(--size-40); }
   max-height: 100%;
 }
 
+/* Product Pitch Section */
+
+.product-pitch > div { margin: var(--size-50); }
+
+.product-pitch-heading { 
+  margin: auto;
+  text-align: center;
+  width: 530px;
+  margin-bottom: var(--size-75);
+}
+
+.product-pitch-heading h2 { 
+  margin-block: 0;
+  margin-bottom: var(--size-5);
+}
+
+.step-outline { 
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.step-outline hr {
+  background: black;
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin-block: 0;
+  position: relative;
+  top: var(--size-30);
+}
+
+.bubble-logo {
+  background: #e0e7ef;
+  margin: 0 auto var(--size-15) auto;
+}
+
+.bubble-logo div {
+  margin: auto;
+  height: var(--size-10);
+  width: var(--size-10);
+  background: var(--primary-btn);
+  border-radius: 50%;
+}
+
+.step:nth-child(2) {
+  text-align: center;
+}
