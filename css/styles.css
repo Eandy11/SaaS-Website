@@ -242,7 +242,7 @@ header div button { margin-left: var(--size-40); }
 
 /* Product Pitch Section */
 
-.product-pitch > div { margin: var(--size-50); }
+.product-pitch > div { margin: var(--size-50) 0; }
 
 .product-pitch-heading { 
   margin: auto;
@@ -256,25 +256,59 @@ header div button { margin-left: var(--size-40); }
   margin-bottom: var(--size-5);
 }
 
-.step-outline { 
-  display: flex;
+.step-outline,
+.step-visual,
+.step-captions { display: flex; }
+
+/* .step-outline { 
+  flex-direction: column;
+  gap: var(--size-24);
+} */
+
+.step-outline {
   justify-content: space-around;
-  position: relative;
+  align-items: center;
+}
+
+.step-visual,
+.step-captions { 
+  justify-content: space-around;
+}
+
+.step-visual {
+  gap: 0.25rem;
 }
 
 .step-outline hr {
-  background: black;
+  background: #e0e7ef;
   border: none;
   height: 1px;
-  width: 100%;
   margin-block: 0;
-  position: relative;
-  top: var(--size-30);
+  margin-inline: 0;
+  flex: 1;
+  display: flex;
 }
 
-.bubble-logo {
+.step { 
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step:nth-child(1) .line hr:first-child,
+.step:nth-child(4) .line hr:last-child
+ { background: transparent; }
+
+.bubble-logo { 
   background: #e0e7ef;
-  margin: 0 auto var(--size-15) auto;
+  margin: var(--size-20) auto;
 }
 
 .bubble-logo div {
@@ -285,6 +319,6 @@ header div button { margin-left: var(--size-40); }
   border-radius: 50%;
 }
 
-.step:nth-child(2) {
+.step-captions {
   text-align: center;
 }
