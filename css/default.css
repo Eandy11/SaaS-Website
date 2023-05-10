@@ -35,7 +35,9 @@
   --size-200: 12.5rem;
   --size-250: 15.625rem;
   --size-400: 25rem;
+  --size-450: 28.125rem;
   --size-500: 31.25rem;
+  --size-530: 33.125rem;
   --size-632: 39.5rem;
   --size-700: 43.75rem;
 }
@@ -64,7 +66,7 @@ a { text-decoration: none; }
 
 .container {
   max-width: 1024px;
-  margin: 0 auto;
+  margin: var(--size-50) auto 0 auto;
 }
 
 .btn-default {
