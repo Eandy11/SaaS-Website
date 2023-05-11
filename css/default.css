@@ -31,6 +31,7 @@
   --size-75: 4.6875rem;
   --size-80: 5rem;
   --size-100: 6.25rem;
+  --size-115: 7.1875rem;
   --size-150: 9.375rem;
   --size-200: 12.5rem;
   --size-250: 15.625rem;
@@ -63,6 +64,8 @@ main {
 }
 
 a { text-decoration: none; }
+
+p { margin-block: 0; }
 
 .container {
   max-width: 1024px;

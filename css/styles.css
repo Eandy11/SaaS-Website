@@ -342,3 +342,52 @@ header div button { margin-left: var(--size-40); }
 
 /* Testimony Section */
 
+.testimony > div { margin-top: var(--size-50); }
+
+.featured-review,
+.reviewer-container,
+.comments { display: flex; }
+
+.featured-review { justify-content: space-between; }
+
+.reviewer-container { 
+  width: 475px;
+  height: var(--size-500);
+  position: relative;
+}
+
+.reviewer-container img { position: absolute; }
+
+.reviewer-container img:first-child {
+  bottom: 0;
+  left: 0;
+  max-height: 75%;
+  width: 240px;
+  z-index: -5;
+}
+
+.reviewer-container img:last-child {
+  max-height: 90%;
+  top: 0;
+  right: 0;
+}
+
+.comments {
+  width: 500px;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--size-50);
+}
+
+.comments img { width: var(--size-115); }
+
+.comments p { font-size: var(--size-24); }
+
+.comments div:first-child { font-size: var(--size-18); }
+
+.comments div div:first-child { font-weight: 700; }
+
+.comments div div:last-child { 
+  color: var(--font-color-dim);
+  font-size: var(--size-15);
+}
