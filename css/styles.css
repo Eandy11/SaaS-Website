@@ -204,7 +204,7 @@ header div button { margin-left: var(--size-40); }
 
 .card-content p { color: var(--font-color-dim); }
 
-.cards .card .card-content button {
+.sketch-button {
   background: #44d7a8;
   color: var(--white);
   padding: var(--size-5) var(--size-12);
@@ -259,22 +259,11 @@ header div button { margin-left: var(--size-40); }
   margin-bottom: var(--size-5);
 }
 
-.step-outline,
-.step-visual,
-.step-captions { display: flex; }
+.step-outline { display: flex; }
 
 .step-outline {
   justify-content: space-around;
   align-items: center;
-}
-
-.step-visual,
-.step-captions { 
-  justify-content: space-around;
-}
-
-.step-visual {
-  gap: var(--size-8);
 }
 
 .step-outline hr {
@@ -351,7 +340,7 @@ header div button { margin-left: var(--size-40); }
 .featured-review { justify-content: space-between; }
 
 .reviewer-container { 
-  width: 475px;
+  width: var(--size-475);
   height: var(--size-500);
   position: relative;
 }
@@ -362,7 +351,7 @@ header div button { margin-left: var(--size-40); }
   bottom: 0;
   left: 0;
   max-height: 75%;
-  width: 240px;
+  width: var(--size-240);
   z-index: -5;
 }
 
@@ -373,13 +362,14 @@ header div button { margin-left: var(--size-40); }
 }
 
 .comments {
-  width: 500px;
+  width: var(--size-500);
   flex-direction: column;
   justify-content: center;
   gap: var(--size-50);
 }
 
-.comments img { width: var(--size-115); }
+.comments img,
+.partner-logo { width: var(--size-115); }
 
 .comments p { font-size: var(--size-24); }
 
@@ -391,3 +381,41 @@ header div button { margin-left: var(--size-40); }
   color: var(--font-color-dim);
   font-size: var(--size-15);
 }
+
+/* Trusted Partners Section */
+
+.trusted-partners div div:first-child { 
+  text-align: center;
+  color: var(--font-color-dim);
+  font-weight: 600;
+  font-size: var(--size-18);
+  margin-bottom: var(--size-40);
+}
+
+.partners { 
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Product Pricing Section */
+
+.product-pricing > div,
+.pricing-description,
+.payment-card { display: flex; }
+
+.product-pricing > div,
+.payment-card { flex-direction: column; }
+
+.pricing-header { text-align: center; }
+
+.pricing-description { justify-content: space-between; }
+
+.payment-card > div div:first-child span,
+.payment-card > div div:last-child,
+.payment-card p { color: var(--font-color-dim); }
+
+.payment-card > div div:first-child { font-size: var(--size-50); }
+
+.payment-card > div div:first-child span { font-size: var(--size-25) ;}
+
+.payment-card hr { margin: var(--size-25) 0; }
