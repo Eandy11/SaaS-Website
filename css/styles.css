@@ -87,31 +87,35 @@ header div button { margin-left: var(--size-40); }
   height: 100%;
 }
 
-.empowered-apps div,
-.bubble-logo {
-  height: var(--size-60);
-  width: var(--size-60);
+.bubble-logo,
+.bubble-logo-large {
   display: flex;
   border-radius: 50%;
   background: white;
+}
+
+.bubble-logo {
+  height: var(--size-60);
+  width: var(--size-60);
+}
+
+.bubble-logo-large {
+  height: var(--size-80);
+  width: var(--size-80);
+}
+
+.bubble-logo img,
+.bubble-logo-large img {
+  background: var(--white);
+  max-width: 60%;
+  max-height: 60%;
+  margin: auto;
 }
 
 .empowered-apps div {
   position: absolute;
   border: transparent;
   box-shadow: 0 0 var(--size-10) rgba(0, 0, 0, 30%);
-}
-
-.empowered-apps .bubble-logo-large {
-  height: var(--size-80);
-  width: var(--size-80);
-}
-
-.empowered-apps div img {
-  background: var(--white);
-  max-width: 60%;
-  max-height: 60%;
-  margin: auto;
 }
 
 .empowered-apps div:nth-child(1) {
@@ -225,12 +229,20 @@ header div button { margin-left: var(--size-40); }
 .small-video-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
 }
 
+.small-video-container .pitch,
+.small-video-container .thumbnail { width: 45%; }
+
 .small-video-container .pitch { margin-left: var(--size-25); }
 
-.small-video-container .pitch h2 { font-weight: 500; }
+.small-video-container .pitch h2 { 
+  font-weight: 500;
+  margin-bottom: var(--size-25);
+  font-size: var(--size-28);
+}
 
 .small-video-container .thumbnail { align-self: flex-end; }
 
@@ -267,11 +279,7 @@ header div button { margin-left: var(--size-40); }
 }
 
 .step-outline hr {
-  background: var(--primary-shadow);
-  border: none;
-  height: 2px;
-  margin-block: 0;
-  margin-inline: 0;
+  border-color: var(--primary-shadow);
   flex: 1;
   display: flex;
 }
@@ -290,8 +298,7 @@ header div button { margin-left: var(--size-40); }
 }
 
 .step:nth-child(1) .line hr:first-child,
-.step:nth-child(4) .line hr:last-child
- { background: transparent; }
+.step:nth-child(4) .line hr:last-child { border-color: transparent; }
 
 .line .bubble-logo { 
   background: var(--primary-shadow);
@@ -376,11 +383,12 @@ section.trusted-partners { margin-top: var(--size-100); }
 
 .comments p { font-size: var(--size-24); }
 
-.comments div:first-child { font-size: var(--size-18); }
+.review-signature div:first-child { 
+  font-size: var(--size-18);
+  font-weight: 700;
+}
 
-.comments div div:first-child { font-weight: 700; }
-
-.comments div div:last-child { 
+.review-signature div:last-child { 
   color: var(--font-color-dim);
   font-size: var(--size-15);
 }
@@ -417,7 +425,7 @@ section.trusted-partners { margin-top: var(--size-100); }
 .pricing-header,
 .payment-card p { margin-bottom: var(--size-50); }
 
-.payment-card { width: 35%; }
+.payment-card { width: 41%; }
 
 .payment-card > div {
   height: var(--size-80);
@@ -456,3 +464,86 @@ section.trusted-partners { margin-top: var(--size-100); }
 .pricing-features div:nth-child(3) { grid-area: 2 / 1; }
 
 .pricing-features div:nth-child(4) { grid-area: 2 / 2; }
+
+/* Application Form Section */
+
+section.application-form > div { 
+  display: flex;
+  justify-content: space-between;
+  height: var(--size-600);
+  color: var(--white);
+  background-color: navy;
+}
+
+section.application-form > div::before { 
+  display: block;
+  position: absolute;
+  content: '';
+  background-color: navy;
+}
+
+.hire-us-pitch,
+.hire-us-form { 
+  display: flex;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+}
+
+.hire-us-pitch > div { padding: 0 var(--size-75); }
+
+.hire-us-pitch > div div:first-child { 
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.hire-us-pitch > div div:first-child h2 { margin-bottom: var(--size-10); }
+
+.hire-us-pitch > div div:first-child div { color: var(--font-color-dim); }
+
+.hire-us-pitch > div div:first-child hr { 
+  margin: var(--size-25) 0;
+  height: initial;
+}
+
+.hire-us-pitch > div p { margin-bottom: var(--size-50); }
+
+.hire-us-pitch > div .review-signature { margin: var(--size-50) 0; }
+
+.bubble-people {
+  display: flex;
+  width: var(--size-200);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bubble-people div { 
+  position: initial;
+  box-shadow: none;
+}
+
+.bubble-people div img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+.bubble-people div:first-child,
+.bubble-people div:nth-child(2) {
+  height: var(--size-40);
+  width: var(--size-40);
+}
+
+.hire-us-form > div {
+  height: 90%;
+  background: black;
+  border-radius: var(--size-15);
+  padding: var(--size-30);
+  margin: var(--size-30);
+}
+
+.hire-us-form > div div:first-child {
+  font-weight: 700;
+  font-size: var(--size-15);
+  margin-bottom: var(--size-10);
+}

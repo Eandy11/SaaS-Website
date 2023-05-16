@@ -44,50 +44,6 @@
             </div>
           </div>
           <div class="empowered-apps">
-            <!-- Separate icons into 3 rows, absolute position icons by row -->
-            <!-- <table>
-              <tr>
-                <td>
-                  <div class="empowered-logo">
-                    <img src="/starter-package/logo_icons/google.png" alt="Google">
-                  </div>
-                </td>
-                <td>
-                  <div class="empowered-logo-large">
-                    <img src="/starter-package/logo_icons/atlassian.png" alt="Atlassian">
-                  </div>
-                </td>
-                <td>
-                  <div class="empowered-logo-large">
-                    <img src="/starter-package/logo_icons/asana.png" alt="Asana">
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="empowered-logo-large">
-                    <img src="/starter-package/logo_icons/paypal.jpg" alt="PayPal">
-                  </div>
-                </td>
-                <td>
-                  <div class="empowered-logo-large">
-                    <img src="/starter-package/logo_icons/weave.png" alt="Weave">
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="empowered-logo">
-                    <img src="/starter-package/logo_icons/google-A.png" alt="Google-A">
-                  </div>
-                </td>
-                <td>
-                  <div class="empowered-logo-large">
-                    <img src="/starter-package/logo_icons/calendar.png" alt="Calendar">
-                  </div>
-                </td>
-              </tr>
-            </table> -->
             <div class="bubble-logo">
               <img src="/starter-package/logo_icons/google.png" alt="Google">
             </div>
@@ -261,7 +217,7 @@
             <div class="comments">
               <img src="/starter-package/company_logos/hubspot.svg" alt="Hubspot">
               <p>The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!</p>
-              <div>
+              <div class="review-signature">
                 <div>Christina Kray</div>
                 <div>Executive Director</div>
               </div>
@@ -354,7 +310,68 @@
         </div>
       </section>
 
-      <section class="application-form container"></section>
+      <section class="application-form container">
+        <div>
+          <div class="hire-us-pitch">
+            <div>
+              <div>
+                <h2>Hire Us</h2>
+                <div>Whatever your goal -<br> we will get you there</div>
+                <hr>
+              </div>
+              <blockquote>"I love front! I love the ease of use, I love the fact that I have total creative freedom..."</blockquote>
+              <div class="review-signature">
+                <div>Charlotte Moore</div>
+                <div>Head of Commercials, Slack</div>
+              </div>
+              <div class="bubble-people">
+                <div class="bubble-logo">
+                  <img src="./starter-package/people/woman_two.jpg" alt="Person">
+                </div>
+                <div class="bubble-logo">
+                  <img src="./starter-package/people/woman_one.jpg" alt="Person">
+                </div>
+                <div class="bubble-logo">
+                  <img src="./starter-package/people/man_one.jpg" alt="Person">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hire-us-form">
+            <div>
+              <div>Fill out the form and we'll be in touch as soon as possible</div>
+              <form action="submit">
+                <input type="text" placeholder="First name" name="first_name" />
+                <input type="text" placeholder="Last name" name="last_name" />
+                <input type="text" placeholder="First name" name="first_name_2" />
+                <input type="text" placeholder="Last name" name="last_name_2" />
+                <select name="budget" id="budget">
+                  <option value="Budget" selected>Budget</option>
+                </select>
+                <select name="country" id="country">
+                  <option value="Country" selected>Country</option>
+                </select>
+                <textarea 
+                  name="need-description" 
+                  id="need-description" 
+                  cols="30" 
+                  rows="10"
+                  placeholder="Tell us more about your project, needs, and timeline, please...">
+                </textarea>
+                <label for="email-signup" name="email-signup">
+                  <input type="checkbox" name="email-signup" id="email-signup" />
+                  <span>Yes, I'd like to receive occasional marketing emails from Front. I have the right to opt out at any time.</span>
+                </label>
+                <div>
+                  <span>View privacy policy</span>
+                  <span>View privacy policy</span>
+                </div>
+                <button class="btn-default">Get Started</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
 

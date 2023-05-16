@@ -43,8 +43,13 @@
   --size-475: 29.6875rem;
   --size-500: 31.25rem;
   --size-530: 33.125rem;
+  --size-600: 37.5rem;
   --size-632: 39.5rem;
   --size-700: 43.75rem;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -61,15 +66,24 @@ main {
   margin-left: var(--size-35);
 }
 
-main {
-  margin-bottom: var(--size-50);
-  /* background-image: url("/header-bg.svg");
-  background-repeat: no-repeat; */
-}
+main { margin-bottom: var(--size-50); }
 
 a { text-decoration: none; }
 
-p { margin-block: 0; }
+h2,
+p,
+hr,
+blockquote { margin-block: 0; }
+
+hr,
+blockquote { margin-inline: 0; }
+
+hr { border-bottom: 1px solid; }
+
+blockquote { 
+  font-style: italic;
+  font-size: var(--size-15);
+}
 
 .container {
   max-width: 1024px;
