@@ -2,7 +2,7 @@
 
 .background-header {
   position: relative;
-  background-image: conic-gradient(from 200deg at 77% 0%, #f3f3f3, #e0e7ef);
+  background-image: conic-gradient(from 200deg at 77% 0%, #f3f3f3, var(--primary-shadow));
   padding-bottom: var(--size-200);
   z-index: -1;
 }
@@ -170,10 +170,12 @@ header div button { margin-left: var(--size-40); }
 }
 
 .card {
-  box-shadow: 0 0 var(--size-10) rgba(48, 63, 100, 0.15);
   text-align: left;
   border-radius: 2px;
 }
+
+.card,
+.payment-card { box-shadow: 0 0 var(--size-10) var(--card-shadow); }
 
 .card-image-wrapper {
   height: var(--size-60);
@@ -185,17 +187,16 @@ header div button { margin-left: var(--size-40); }
   max-height: 100%;
 }
 
-.cards .card .card-content div:nth-child(2) { 
-  margin: var(--size-20) 0; 
-}
+.card-content div,
+.card-content p { margin-bottom: var(--size-20);  }
 
-.cards .card:nth-child(3) .card-content div {
+.card:nth-child(3) .card-content div {
   display: flex;
   align-items: flex-start;
   gap: var(--size-16);
 }
 
-.cards .card .card-content { padding: var(--size-20); }
+.card-content { padding: var(--size-20); }
 
 .card-content h5 { 
   font-size: var(--size-16);
@@ -204,16 +205,14 @@ header div button { margin-left: var(--size-40); }
 
 .card-content p { color: var(--font-color-dim); }
 
+.card-content a { color: var(--primary-btn); }
+
 .sketch-button {
   background: #44d7a8;
   color: var(--white);
   padding: var(--size-5) var(--size-12);
   border: transparent;
   border-radius: var(--size-15);
-}
-
-.cards .card .card-content a {
-  color: var(--primary-btn);
 }
 
 /* video Demo Section */
@@ -254,9 +253,10 @@ header div button { margin-left: var(--size-40); }
   margin-bottom: var(--size-75);
 }
 
-.product-pitch-heading h2 { 
+.product-pitch-heading h2,
+.pricing-header h2 { 
   margin-block: 0;
-  margin-bottom: var(--size-5);
+  margin-bottom: var(--size-8);
 }
 
 .step-outline { display: flex; }
@@ -267,7 +267,7 @@ header div button { margin-left: var(--size-40); }
 }
 
 .step-outline hr {
-  background: #e0e7ef;
+  background: var(--primary-shadow);
   border: none;
   height: 2px;
   margin-block: 0;
@@ -294,7 +294,7 @@ header div button { margin-left: var(--size-40); }
  { background: transparent; }
 
 .line .bubble-logo { 
-  background: #e0e7ef;
+  background: var(--primary-shadow);
   margin: var(--size-20) auto;
 }
 
@@ -330,6 +330,9 @@ header div button { margin-left: var(--size-40); }
 }
 
 /* Testimony Section */
+
+section.testimony,
+section.trusted-partners { margin-top: var(--size-100); }
 
 .testimony > div { margin-top: var(--size-50); }
 
@@ -399,17 +402,29 @@ header div button { margin-left: var(--size-40); }
 
 /* Product Pricing Section */
 
-.product-pricing > div,
-.pricing-description,
-.payment-card { display: flex; }
+.product-pricing > div { height: 600px; }
 
-.product-pricing > div,
-.payment-card { flex-direction: column; }
+.pricing-overview { 
+  display: flex;
+  justify-content: space-between;
+}
 
-.pricing-header { text-align: center; }
+.pricing-header { 
+  text-align: center;
+  margin-bottom: var(--size-50);
+}
 
-.pricing-description { justify-content: space-between; }
+.pricing-header,
+.payment-card p { margin-bottom: var(--size-50); }
 
+.payment-card { width: 35%; }
+
+.payment-card > div {
+  height: var(--size-80);
+  padding: var(--size-75) var(--size-40);
+}
+
+.pricing-header div,
 .payment-card > div div:first-child span,
 .payment-card > div div:last-child,
 .payment-card p { color: var(--font-color-dim); }
@@ -418,4 +433,26 @@ header div button { margin-left: var(--size-40); }
 
 .payment-card > div div:first-child span { font-size: var(--size-25) ;}
 
-.payment-card hr { margin: var(--size-25) 0; }
+.payment-card hr { 
+  margin: var(--size-25) 0;
+  border-color: var(--primary-shadow);
+}
+
+.payment-card p { font-size: var(--size-20); }
+
+.payment-card > div div:last-child { padding-top: var(--size-5); }
+
+.pricing-features { 
+  display: grid;
+  width: 55%;
+}
+
+.pricing-features div { box-shadow: none; }
+
+.pricing-features div:nth-child(1) { grid-area: 1 / 1; }
+
+.pricing-features div:nth-child(2) { grid-area: 1 / 2; }
+
+.pricing-features div:nth-child(3) { grid-area: 2 / 1; }
+
+.pricing-features div:nth-child(4) { grid-area: 2 / 2; }
