@@ -470,7 +470,7 @@ section.trusted-partners { margin-top: var(--size-100); }
 section.application-form > div { 
   display: flex;
   justify-content: space-between;
-  height: var(--size-600);
+  height: var(--size-700);
   color: var(--white);
   background-color: navy;
 }
@@ -486,7 +486,7 @@ section.application-form > div::before {
 .hire-us-form { 
   display: flex;
   align-items: center;
-  width: 45%;
+  width: 50%;
   height: 100%;
 }
 
@@ -534,16 +534,84 @@ section.application-form > div::before {
   width: var(--size-40);
 }
 
+.hire-us-form > div form *::placeholder,
+.hire-us-form > div form * { font-weight: 600; }
+
 .hire-us-form > div {
-  height: 90%;
-  background: black;
+  max-height: 90%;
+  background: var(--white);
+  color: var(--black);
   border-radius: var(--size-15);
-  padding: var(--size-30);
+  padding: var(--size-50) var(--size-30);
   margin: var(--size-30);
 }
 
-.hire-us-form > div div:first-child {
+.hire-us-form > div > div:first-child {
+  margin-bottom: var(--size-20);
   font-weight: 700;
-  font-size: var(--size-15);
-  margin-bottom: var(--size-10);
 }
+.hire-us-form > div > div:first-child,
+.hire-us-form > div form label,
+.privacy-policy div { font-size: var(--size-15); }
+
+.hire-us-form > div form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--size-20);
+}
+
+.hire-us-form > div form::placeholder { color: var(--font-color-dim); }
+
+.hire-us-form > div form input,
+.hire-us-form > div form select,
+.hire-us-form > div form textarea { 
+  padding: var(--size-8) var(--size-5);
+  border-radius: var(--size-5);
+  border: none;
+  outline: 1px solid var(--font-color-light);
+}
+
+.hire-us-form > div form select { 
+  font-weight: 600;
+  border-right: var(--size-12) solid transparent;
+}
+
+.hire-us-form > div form textarea,
+.hire-us-form > div form label,
+.privacy-policy,
+.hire-us-form > div form button { grid-column: 1 / 3; }
+
+.hire-us-form > div form label {
+  position: relative;
+  display: flex;
+  gap: var(--size-15);
+  font-size: var(--size-15);
+  color: var(--font-color-dim);
+}
+
+.hire-us-form > div form label input[type=checkbox] {
+  appearance: none;
+  height: fit-content;
+  border-radius: 2px;
+  width: var(--size-20);
+  transform: scale(1.5);
+}
+
+
+.hire-us-form > div form .privacy-policy {
+  grid-column: 1 / 3;
+  display: flex;
+  margin-left: var(--size-40);
+  gap: var(--size-30);
+}
+
+
+.privacy-policy div { border-bottom: 2px dashed var(--black); }
+
+.privacy-policy div:last-child {
+  border-color: var(--primary-btn);
+  padding-bottom: 2px;
+  color: var(--primary-btn);
+}
+
+.hire-us-form > div form button { margin: 15px auto; }

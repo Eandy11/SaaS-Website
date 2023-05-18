@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -345,28 +345,27 @@
                 <input type="text" placeholder="Last name" name="last_name" />
                 <input type="text" placeholder="First name" name="first_name_2" />
                 <input type="text" placeholder="Last name" name="last_name_2" />
-                <select name="budget" id="budget">
+                <select name="budget" id="budget" title="Budget">
                   <option value="Budget" selected>Budget</option>
                 </select>
-                <select name="country" id="country">
+                <select name="country" id="country" title="Budget">
                   <option value="Country" selected>Country</option>
                 </select>
                 <textarea 
                   name="need-description" 
                   id="need-description" 
                   cols="30" 
-                  rows="10"
-                  placeholder="Tell us more about your project, needs, and timeline, please...">
-                </textarea>
+                  rows="8"
+                  placeholder="Tell us more about your project, needs, and timeline, please..."></textarea>
                 <label for="email-signup" name="email-signup">
                   <input type="checkbox" name="email-signup" id="email-signup" />
-                  <span>Yes, I'd like to receive occasional marketing emails from Front. I have the right to opt out at any time.</span>
+                  <div>Yes, I'd like to receive occasional marketing emails from Front. I have the right to opt out at any time.</div>
                 </label>
-                <div>
-                  <span>View privacy policy</span>
-                  <span>View privacy policy</span>
+                <div class="privacy-policy">
+                  <div>View privacy policy</div>
+                  <div><a>View privacy policy</a></div>
                 </div>
-                <button class="btn-default">Get Started</button>
+                <button type="submit" class="btn-default">Get Started</button>
               </form>
             </div>
           </div>
