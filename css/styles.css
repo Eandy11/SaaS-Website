@@ -470,7 +470,7 @@ section.trusted-partners { margin-top: var(--size-100); }
 section.application-form > div { 
   display: flex;
   justify-content: space-between;
-  height: var(--size-700);
+  height: var(--size-660);
   color: var(--white);
   background-color: navy;
 }
@@ -537,13 +537,14 @@ section.application-form > div::before {
 .hire-us-form > div form *::placeholder,
 .hire-us-form > div form * { font-weight: 600; }
 
+.hire-us-form,
+.hire-us-form > div { padding: var(--size-30); }
+
 .hire-us-form > div {
-  max-height: 90%;
+  height: 100%;
   background: var(--white);
   color: var(--black);
   border-radius: var(--size-15);
-  padding: var(--size-50) var(--size-30);
-  margin: var(--size-30);
 }
 
 .hire-us-form > div > div:first-child {
@@ -614,4 +615,4 @@ section.application-form > div::before {
   color: var(--primary-btn);
 }
 
-.hire-us-form > div form button { margin: 15px auto; }
+.hire-us-form > div form button { margin: var(--size-15) auto; }
