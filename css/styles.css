@@ -616,3 +616,28 @@ section.application-form > div::before {
 }
 
 .hire-us-form > div form button { margin: var(--size-15) auto; }
+
+/* Info Footer Section */
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-contact {
+  color: var(--font-color-dim);
+}
+
+.company-contact div i { 
+  margin-right: 5px;
+  font-size: 10px; 
+}
+
+
+.media-links div i {
+  background-color: var(--font-color-light);
+  border-radius: 5px;
+  color: var(--font-color-dim);
+  padding: 10px;
+  font-size: 24px;
+}

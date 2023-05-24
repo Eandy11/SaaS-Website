@@ -75,7 +75,8 @@ a { text-decoration: none; }
 h2,
 p,
 hr,
-blockquote { margin-block: 0; }
+blockquote,
+ul { margin-block: 0; }
 
 hr,
 blockquote { margin-inline: 0; }
@@ -88,6 +89,11 @@ blockquote {
 }
 
 textarea { resize: none; }
+
+ul { 
+  padding-inline: 0;
+  list-style: none; 
+}
 
 .container {
   max-width: 1024px;
