@@ -441,7 +441,8 @@ section.trusted-partners { margin-top: var(--size-100); }
 
 .payment-card > div div:first-child span { font-size: var(--size-25) ;}
 
-.payment-card hr { 
+.payment-card hr,
+footer hr { 
   margin: var(--size-25) 0;
   border-color: var(--primary-shadow);
 }
@@ -619,25 +620,43 @@ section.application-form > div::before {
 
 /* Info Footer Section */
 
-.site-nav {
-  display: flex;
-  justify-content: space-between;
-}
+.site-nav,
+.hiring { display: flex; }
 
+.site-nav { justify-content: space-around; }
+
+.site-nav div ul,
 .company-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-10);
+  font-size: var(--size-14);
+  font-weight: 500;
   color: var(--font-color-dim);
 }
 
-.company-contact div i { 
-  margin-right: 5px;
-  font-size: 10px; 
+.site-nav div i { 
+  margin-right: var(--size-5);
+  font-size: var(--size-10); 
 }
 
+.site-nav div a { color: var(--primary-btn); }
+
+.hiring { gap: var(--size-15); }
+
+.hiring button {
+  color: var(--white);
+  background: var(--primary-btn);
+  border-radius: var(--size-5);
+  border: none;
+  font-size: var(--size-8);
+  padding: 2px;
+}
 
 .media-links div i {
   background-color: var(--font-color-light);
-  border-radius: 5px;
+  border-radius: var(--size-5);
   color: var(--font-color-dim);
-  padding: 10px;
-  font-size: 24px;
+  padding: var(--size-10);
+  font-size: var(--size-24);
 }
