@@ -1,8 +1,194 @@
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   section.brand .content {
     height: 900px;
     flex-direction: column;
   }
+}
 
+@media screen and 
+  (min-width: 768px)
+  and
+  (max-width: 1024px) {
+
+  /* Header Section */
+
+  header { margin: 0 var(--size-25)}
+
+  [aria-controls="navbarDropdown"] {
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ ul {
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    position: absolute;
+    right: 0;
+    top: var(--size-50);
+    gap: 0;
+    flex-direction: column;
+  }
+
+  [aria-expanded="true"] ~ ul li a {
+    color: var(--font-color-dark);
+    margin-right: var(--size-20);
+  }
+
+  header .btn-default {
+    display: none;
+  }
+
+  .background-header {
+    background-image: conic-gradient(from 200deg at 91% 0%, #f3f3f3, var(--primary-shadow));
+    padding-bottom: 0;
+  }
+
+  /* Brand Section */
+  
+  .brand-statement {
+    text-align: center;
+  }
+
+  .brand > div {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .empowered-apps {
+    height: 500px;
+    width: 550px;
+  }
+
+  .empowered-apps div:nth-child(1) {
+    left: 5%;
+    top: 10%;
+  }
+
+  .empowered-apps div:nth-child(2) {
+    top: 10%;
+    right: 50%;
+  }
+  
+  .empowered-apps div:nth-child(3) {
+    top: 10%;
+    right: 0;
+  }
+  
+  .empowered-apps div:nth-child(4) {
+    top: 36%;
+    left: 5%;
+  }
+  
+  .empowered-apps div:nth-child(5) {
+    top: 36%;
+    right: 22%;
+  }
+  
+  .empowered-apps div:nth-child(6) {
+    top: 63%;
+    right: 63%;
+  }
+  
+  .empowered-apps div:nth-child(7) {
+    top: 69%;
+    right: 2%;
+  }
+
+  /* Key Benefits Section */
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* video Demo Section */
+
+  section.small-video-demo { height: var(--size-600) }
+
+  .small-video-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .small-video-container .pitch,
+  .small-video-container .thumbnail { margin-top: var(--size-25);}
+
+  .small-video-container .pitch {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .small-video-container .thumbnail {
+    align-self: center;
+    width: 100%;
+  }
+
+  /* Testimony Section */
+
+  .featured-review {
+    align-self: center;
+    width: 100%;
+    margin-top: var(--size-25);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comments {
+    align-items: center;
+    text-align: center;
+    width: var(--size-600);
+    margin-top: var(--size-100);
+  }
+
+  /* Trusted Partners Section */
+
+  .partner-logo {
+    width: var(--size-50);
+  }
+
+/* Product Pricing Section */
+
+  .product-pricing { height: var(--size-1000); }
+
+  .pricing-overview {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment-card,
+  .pricing-features { width: 100%; }
+
+  .payment-card > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--size-13);
+    padding: 40px;
+  }
+
+  .payment-card hr {
+    display: flex;
+    width: 100%;
+  }
+
+  .payment-card p { font-size: var(--size-18); }
+
+  .payment-card > div div:last-child { 
+    text-align: center;
+  }
+
+/* Application Form Section */
+
+  section.application-form > div {
+    width: initial;
+    flex-direction: column;
+    padding: 40px 25px;
+    height: 800px;
+  }
+
+  .hire-us-pitch > div { padding: 0; }
+
+  .hire-us-form { width: 100%; }
 
 }

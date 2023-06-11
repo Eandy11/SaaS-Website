@@ -7,15 +7,8 @@
   z-index: -1;
 }
 
-.background-header::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background: url('/header-bg.svg');
-  background-repeat: no-repeat;
-  bottom: 0;
-  height: 40%;
-  z-index: -5;
+.background-header section.header {
+  margin: 0 auto;
 }
 
 section.nav-header { width: 100%; }
@@ -26,23 +19,36 @@ header {
   align-items: center;
 }
 
-header div {
+header nav {
   display: flex;
   align-items: center;
 }
 
-header nav {
+header nav ul {
   display: flex;
   gap: var(--size-24);
 }
 
-header nav a { color: var(--font-color-dim); }
+.navbar-toggler {
+  position: absolute;
+  right: var(--size-20);
+  top: var(--size-10);
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
+}
 
-header nav div:nth-child(2) a, .learn-more a { 
+[aria-controls="navbarDropdown"] {
+  display: none;
+}
+
+header nav ul a { color: var(--font-color-dim); }
+
+header nav ul a:nth-child(2), .learn-more a { 
   color: var(--primary-btn); 
 }
 
-header div button { margin-left: var(--size-40); }
+header .btn-default { margin-left: var(--size-40); }
 
 /* Brand Section */
 
@@ -122,6 +128,7 @@ header div button { margin-left: var(--size-40); }
   left: 5%;
   top: 10%;
 }
+
 .empowered-apps div:nth-child(2) {
   top: 10%;
   right: 50%;
@@ -434,7 +441,6 @@ section.trusted-partners { margin-top: var(--size-100); }
 .payment-card { width: 41%; }
 
 .payment-card > div {
-  height: var(--size-80);
   padding: var(--size-75) var(--size-40);
 }
 
@@ -605,14 +611,12 @@ section.application-form > div::before {
   transform: scale(1.5);
 }
 
-
 .hire-us-form > div form .privacy-policy {
   grid-column: 1 / 3;
   display: flex;
   margin-left: var(--size-40);
   gap: var(--size-30);
 }
-
 
 .privacy-policy div { border-bottom: 2px dashed var(--black); }
 

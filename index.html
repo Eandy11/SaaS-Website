@@ -16,21 +16,24 @@
     
     <div class="background-header">
       <section class="header container">
-        <header>
+        <header id="topNav" class="navbar nav">
           <img src="/starter-package/project_logo/logo.svg" 
               alt="Front" 
               height="90" 
               width="140">
-          <div>
-            <nav>
-              <div><a>Home</a></div>
-              <div><a>Features</a></div>
-              <div><a>Learn</a></div>
-              <div><a>Pricing</a></div>
-              <div><a>Hire us</a></div>
-            </nav>
+          <nav>
+            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
+              <span>☰</span>
+            </button>
+            <ul class="navbar-nav">
+              <li><a>Home</a></li>
+              <li><a>Features</a></li>
+              <li><a>Learn</a></li>
+              <li><a>Pricing</a></li>
+              <li><a>Hire us</a></li>
+            </ul>
             <button class="btn-default">Buy Now</button>
-          </div>
+          </nav>
         </header>
       </section>
       <section class="brand container">
@@ -464,5 +467,23 @@
       </footer>
     </section>
 
+    <script>
+      const nav = document.getElementById("topNav");
+      window.onscroll = function() {
+        if (window.pageYOffset > 100) {
+          nav.classList.add("sticky");
+        } else {
+          nav.classList.remove("sticky");
+        }
+      }
+
+      const navButton = document.querySelector('button[aria-expanded]');
+      const toggleNav = ({ target }) => {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navButton.setAttribute('aria-expanded', !expanded);
+      }
+
+      navButton.addEventListener('click', toggleNav);
+    </script>
   </body>
 </html>
