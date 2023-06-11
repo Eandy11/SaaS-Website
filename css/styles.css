@@ -410,7 +410,7 @@ section.trusted-partners { margin-top: var(--size-100); }
 
 /* Product Pricing Section */
 
-.product-pricing > div { height: 600px; }
+.product-pricing > div { height: var(--size-600); }
 
 .pricing-overview { 
   display: flex;
@@ -536,7 +536,7 @@ section.application-form > div::before {
 }
 
 .hire-us-form > div form *::placeholder,
-.hire-us-form > div form * { font-weight: 600; }
+.hire-us-form > div form * { font-weight: 500; }
 
 .hire-us-form,
 .hire-us-form > div { padding: var(--size-30); }
@@ -630,6 +630,9 @@ section.application-form > div::before {
   display: flex;
   flex-direction: column;
   gap: var(--size-10);
+}
+
+.info-footer footer {
   font-size: var(--size-14);
   font-weight: 500;
   color: var(--font-color-dim);
@@ -650,13 +653,54 @@ section.application-form > div::before {
   border-radius: var(--size-5);
   border: none;
   font-size: var(--size-8);
-  padding: 2px;
+  padding: 2px; 
+}
+
+.media-links { gap: 20px; }
+
+.media-links div {
+  height: 35px;
+  width: 35px;
+  background-color: var(--primary-shadow);
+  color: var(--font-color-dim);
+  border-radius: var(--size-5);
+  font-size: var(--size-16);
 }
 
 .media-links div i {
-  background-color: var(--font-color-light);
-  border-radius: var(--size-5);
-  color: var(--font-color-dim);
-  padding: var(--size-10);
-  font-size: var(--size-24);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-links div:hover {
+  background-color: var(--font-color-dim);
+  color: var(--primary-shadow);
+}
+
+.media-info > div:first-child,
+.media-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+select { 
+  appearance: none;
+}
+
+select::before {
+  content: 'F107';
+}
+
+.copyright { 
+  text-align: center;
+  margin-top: 25px;
+}
+
+.copyright p { 
+  width: 800px;
+  margin: 25px auto;
+  line-height: 1.5;
 }

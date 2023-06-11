@@ -70,7 +70,10 @@ main {
 
 main { margin-bottom: var(--size-50); }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+  color: var(--primary-btn);
+}
 
 h2,
 p,
