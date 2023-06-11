@@ -35,6 +35,7 @@
   --size-80: 5rem;
   --size-100: 6.25rem;
   --size-115: 7.1875rem;
+  --size-135: 8.4375rem;
   --size-150: 9.375rem;
   --size-200: 12.5rem;
   --size-240: 15rem;
@@ -48,6 +49,7 @@
   --size-632: 39.5rem;
   --size-660: 41.25rem;
   --size-700: 43.75rem;
+  --size-800: 50rem;
 }
 
 * {

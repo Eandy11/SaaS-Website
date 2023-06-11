@@ -176,10 +176,16 @@ header div button { margin-left: var(--size-40); }
 .card {
   text-align: left;
   border-radius: 2px;
+  position: relative;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
 .card,
-.payment-card { box-shadow: 0 0 var(--size-10) var(--card-shadow); }
+.payment-card { box-shadow: 0 4px var(--size-10) var(--card-shadow); }
 
 .card-image-wrapper {
   height: var(--size-60);
@@ -656,15 +662,24 @@ section.application-form > div::before {
   padding: 2px; 
 }
 
-.media-links { gap: 20px; }
+.media-links { 
+  gap: var(--size-20);
+  height: var(--size-35);
+  align-items: center;
+}
 
 .media-links div {
-  height: 35px;
-  width: 35px;
-  background-color: var(--primary-shadow);
-  color: var(--font-color-dim);
-  border-radius: var(--size-5);
+  height: 100%;
+  width: var(--size-35);
   font-size: var(--size-16);
+  color: var(--font-color-dim);
+}
+
+.media-links div,
+.media-links select {
+  background-color: var(--primary-shadow);
+  border-radius: var(--size-5);
+  cursor: pointer;
 }
 
 .media-links div i {
@@ -686,21 +701,25 @@ section.application-form > div::before {
   justify-content: space-between;
 }
 
-select { 
+.media-links select { 
   appearance: none;
-}
-
-select::before {
-  content: 'F107';
+  border: none;
+  height: 75%;
+  padding-right: var(--size-40);
+  padding-left: var(--size-10);
+  background-image: url(/angle-down-solid.svg);
+  background-repeat: no-repeat;
+  background-position: var(--size-135);
+  background-size: 2ch;
 }
 
 .copyright { 
   text-align: center;
-  margin-top: 25px;
+  margin-top: var(--size-25);
 }
 
 .copyright p { 
-  width: 800px;
-  margin: 25px auto;
+  width: var(--size-800);
+  margin: var(--size-25) auto;
   line-height: 1.5;
 }
