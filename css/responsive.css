@@ -149,7 +149,7 @@
 
 /* Product Pricing Section */
 
-  .product-pricing { height: var(--size-1000); }
+  .product-pricing { height: var(--size-950); }
 
   .pricing-overview {
     flex-direction: column;
@@ -184,11 +184,45 @@
     width: initial;
     flex-direction: column;
     padding: 40px 25px;
-    height: 800px;
+    height: 900px;
+  }
+  
+  .hire-us-pitch { width: 100%; }
+
+  .hire-us-pitch > div { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
   }
 
-  .hire-us-pitch > div { padding: 0; }
+  .hire-us-testimony .slogan,
+  .hire-us-testimony blockquote { 
+    width: 301px; 
+  }
 
-  .hire-us-form { width: 100%; }
+  .hire-us-testimony hr { width: initial; }
+
+  .hire-us-pitch > div .testimony-selection,
+  .bubble-people {
+    margin-top: var(--size-25);
+  }
+
+  .hire-us-form { 
+    width: 100%;
+    padding: 0;
+  }
+
+  .hire-us-form > div form button {
+    margin: var(--size-15) auto 0;
+  }
+
+/* Info Footer Section */
+
+  .copyright p { 
+    width: var(--size-650);
+    margin: 20px auto 0;
+  }
 
 }

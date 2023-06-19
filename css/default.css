@@ -37,9 +37,11 @@
   --size-115: 7.1875rem;
   --size-135: 8.4375rem;
   --size-150: 9.375rem;
+  --size-170: 10.625rem;
   --size-200: 12.5rem;
   --size-240: 15rem;
   --size-250: 15.625rem;
+  --size-301: 18.8125rem;
   --size-400: 25rem;
   --size-450: 28.125rem;
   --size-475: 29.6875rem;
@@ -47,9 +49,12 @@
   --size-530: 33.125rem;
   --size-600: 37.5rem;
   --size-632: 39.5rem;
+  --size-650: 40.625rem;
   --size-660: 41.25rem;
   --size-700: 43.75rem;
   --size-800: 50rem;
+  --size-900: 56.25rem;
+  --size-950: 59.375rem;
   --size-1000: 62.5rem;
 }
 
@@ -89,10 +94,7 @@ blockquote { margin-inline: 0; }
 
 hr { border-bottom: 1px solid; }
 
-blockquote { 
-  font-style: italic;
-  font-size: var(--size-15);
-}
+blockquote { font-style: italic; }
 
 textarea { resize: none; }
 

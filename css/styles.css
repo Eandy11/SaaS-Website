@@ -44,7 +44,7 @@ header nav ul {
 
 header nav ul a { color: var(--font-color-dim); }
 
-header nav ul a:nth-child(2), .learn-more a { 
+header nav ul li:nth-child(2) a, .learn-more a { 
   color: var(--primary-btn); 
 }
 
@@ -186,7 +186,7 @@ header .btn-default { margin-left: var(--size-40); }
   position: relative;
 }
 
-.card:hover {
+.key-benefits .cards .card:hover {
   cursor: pointer;
   transform: scale(1.01);
 }
@@ -455,7 +455,7 @@ section.trusted-partners { margin-top: var(--size-100); }
 
 .payment-card hr,
 footer hr { 
-  margin: var(--size-25) 0;
+  margin: var(--size-35) 0;
   border-color: var(--primary-shadow);
 }
 
@@ -470,13 +470,13 @@ footer hr {
 
 .pricing-features div { box-shadow: none; }
 
-.pricing-features div:nth-child(1) { grid-area: 1 / 1; }
+.pricing-features .card:nth-child(1) { grid-area: 1 / 1; }
 
-.pricing-features div:nth-child(2) { grid-area: 1 / 2; }
+.pricing-features .card:nth-child(2) { grid-area: 1 / 2; }
 
-.pricing-features div:nth-child(3) { grid-area: 2 / 1; }
+.pricing-features .card:nth-child(3) { grid-area: 2 / 1; }
 
-.pricing-features div:nth-child(4) { grid-area: 2 / 2; }
+.pricing-features .card:nth-child(4) { grid-area: 2 / 2; }
 
 /* Application Form Section */
 
@@ -505,23 +505,33 @@ section.application-form > div::before {
 
 .hire-us-pitch > div { padding: 0 var(--size-75); }
 
-.hire-us-pitch > div div:first-child { 
-  width: -moz-fit-content;
-  width: fit-content;
+.hire-us-testimony { width: 53%; }
+
+.hire-us-testimony h2 { margin-bottom: var(--size-10); }
+
+.hire-us-testimony .slogan { 
+  color: var(--font-color-dim);
 }
 
-.hire-us-pitch > div div:first-child h2 { margin-bottom: var(--size-10); }
+.hire-us-testimony .slogan,
+.hire-us-testimony hr { 
+  width: var(--size-170);
+}
 
-.hire-us-pitch > div div:first-child div { color: var(--font-color-dim); }
+.hire-us-testimony .slogan,
+.hire-us-testimony blockquote { 
+  font-size: var(--size-15);
+}
 
-.hire-us-pitch > div div:first-child hr { 
+.hire-us-testimony hr { 
   margin: var(--size-25) 0;
   height: initial;
 }
 
-.hire-us-pitch > div p { margin-bottom: var(--size-50); }
-
-.hire-us-pitch > div .review-signature { margin: var(--size-50) 0; }
+.hire-us-pitch > div .testimony-selection,
+.bubble-people { 
+  margin-top: var(--size-50); 
+}
 
 .bubble-people {
   display: flex;
@@ -646,6 +656,11 @@ section.application-form > div::before {
   font-size: var(--size-14);
   font-weight: 500;
   color: var(--font-color-dim);
+  padding: var(--size-15);
+}
+
+.info-footer footer hr {
+  opacity: 0.25;
 }
 
 .site-nav div i { 
@@ -684,6 +699,7 @@ section.application-form > div::before {
   background-color: var(--primary-shadow);
   border-radius: var(--size-5);
   cursor: pointer;
+  transition: 0.25s;
 }
 
 .media-links div i {
@@ -719,11 +735,11 @@ section.application-form > div::before {
 
 .copyright { 
   text-align: center;
-  margin-top: var(--size-25);
+  margin: var(--size-35) 0;
 }
 
 .copyright p { 
   width: var(--size-800);
-  margin: var(--size-25) auto;
+  margin: var(--size-15) auto;
   line-height: 1.5;
 }
