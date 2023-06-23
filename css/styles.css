@@ -284,9 +284,8 @@ header .btn-default { margin-left: var(--size-40); }
   margin-bottom: var(--size-8);
 }
 
-.step-outline { display: flex; }
-
 .step-outline {
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }

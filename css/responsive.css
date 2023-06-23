@@ -12,48 +12,12 @@
 
   /* Header Section */
 
-  header { margin: 0 var(--size-25)}
-
-  [aria-controls="navbarDropdown"] {
-    display: block;
-  }
-
-  [aria-expanded="false"] ~ ul {
-    display: none;
-  }
-
-  [aria-expanded="true"] ~ ul {
-    position: absolute;
-    right: 0;
-    top: var(--size-50);
-    gap: 0;
-    flex-direction: column;
-  }
-
-  [aria-expanded="true"] ~ ul li a {
-    color: var(--font-color-dark);
-    margin-right: var(--size-20);
-  }
-
-  header .btn-default {
-    display: none;
-  }
-
   .background-header {
     background-image: conic-gradient(from 200deg at 91% 0%, #f3f3f3, var(--primary-shadow));
     padding-bottom: 0;
   }
 
   /* Brand Section */
-  
-  .brand-statement {
-    text-align: center;
-  }
-
-  .brand > div {
-    flex-direction: column;
-    height: fit-content;
-  }
 
   .empowered-apps {
     height: 500px;
@@ -104,25 +68,7 @@
 
   /* video Demo Section */
 
-  section.small-video-demo { height: var(--size-600) }
 
-  .small-video-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .small-video-container .pitch,
-  .small-video-container .thumbnail { margin-top: var(--size-25);}
-
-  .small-video-container .pitch {
-    width: 90%;
-    margin-left: 0;
-  }
-
-  .small-video-container .thumbnail {
-    align-self: center;
-    width: 100%;
-  }
 
   /* Testimony Section */
 
@@ -147,7 +93,7 @@
     width: var(--size-50);
   }
 
-/* Product Pricing Section */
+  /* Product Pricing Section */
 
   .product-pricing { height: var(--size-950); }
 
@@ -223,6 +169,172 @@
   .copyright p { 
     width: var(--size-650);
     margin: 20px auto 0;
+  }
+
+}
+
+@media screen and 
+(min-width: 360px)
+and
+(max-width: 1024px) {
+
+  /* Header Section */
+
+  header { margin: 0 var(--size-25)}
+
+  [aria-controls="navbarDropdown"] {
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ ul {
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    position: absolute;
+    right: 0;
+    top: var(--size-50);
+    gap: 0;
+    flex-direction: column;
+  }
+
+  [aria-expanded="true"] ~ ul li a {
+    color: var(--font-color-dark);
+    margin-right: var(--size-20);
+  }
+
+  header .btn-default {
+    display: none;
+  }
+
+  /* Brand Section */
+  
+  .brand > div {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .brand-statement { text-align: center; }
+
+  /* Video Demo Section */
+
+  section.small-video-demo { height: fit-content; }
+  
+  .small-video-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .small-video-container .pitch,
+  .small-video-container .thumbnail { margin-top: var(--size-25);}
+
+  .small-video-container .pitch {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .small-video-container .thumbnail {
+    align-self: center;
+    width: 100%;
+  }
+
+
+}
+
+@media screen and 
+(min-width: 360px)
+and
+(max-width: 768px) {
+
+  .container {
+    margin: var(--size-25) auto 0 auto;
+  }
+  
+  /* Brand Section */
+  
+  .brand > div { gap: var(--size-25); }
+
+  .brand-statement { width: 300px; }
+
+  .brand-statement h1 { 
+    font-size: var(--size-25);
+    font-weight: 500;
+  }
+
+  .empowered-apps {
+    height: 350px;
+    width: 330px;
+  }
+
+  .empowered-apps div:nth-child(1) {
+    left: 5%;
+    top: 10%;
+  }
+
+  .empowered-apps div:nth-child(2) {
+    top: 10%;
+    right: 40%;
+  }
+  
+  .empowered-apps div:nth-child(3) {
+    top: 10%;
+    right: 0;
+  }
+  
+  .empowered-apps div:nth-child(4) {
+    top: 36%;
+    left: 5%;
+  }
+  
+  .empowered-apps div:nth-child(5) {
+    top: 36%;
+    right: 20%;
+  }
+  
+  .empowered-apps div:nth-child(6) {
+    top: 65%;
+    right: 48%;
+  }
+  
+  .empowered-apps div:nth-child(7) {
+    top: 69%;
+    right: 4%;
+  }
+
+  /* Key Benefits Section */
+
+  .key-benefits-heading {
+    width: var(--size-300);
+    margin: var(--size-15) auto 0;
+    font-size: var(--size-20);
+  }
+
+  .key-benefits-heading div { 
+    font-size: var(--size-15);
+  }
+
+  .cards { flex-direction: column; }
+
+  /* Product Pitch Section */
+
+  .product-pitch > div {
+    width: var(--size-275);
+    margin: var(--size-50) auto var(--size-100);
+  }
+
+  .product-pitch-heading { 
+    width: 100%;
+    margin-bottom: var(--size-25);
+  }
+
+  .step-outline { flex-direction: column; }
+
+  .step-outline hr { display: none; }
+
+  .step {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--size-30);
   }
 
 }
