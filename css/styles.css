@@ -407,7 +407,7 @@ section.trusted-partners { margin-top: var(--size-100); }
 
 /* Trusted Partners Section */
 
-.trusted-partners div div:first-child { 
+.trusted-partners-caption { 
   text-align: center;
   color: var(--font-color-dim);
   font-weight: 600;
