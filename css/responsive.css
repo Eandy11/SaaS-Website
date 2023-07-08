@@ -6,6 +6,107 @@
 }
 
 @media screen and 
+(min-width: 360px)
+and
+(max-width: 1024px) {
+
+  /* Header Section */
+  
+  header { margin: 0 var(--size-25)}
+
+  .background-header section.header { 
+    margin: 0 auto; 
+  }
+
+  .background-header::after { 
+    bottom: var(--size-150); 
+  }
+
+  section.brand { 
+    margin: var(--size-50) auto 0 auto; 
+  }
+
+  header nav,
+  .empowered-apps {
+    margin-right: 0;
+  }
+
+  [aria-controls="navbarDropdown"] {
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ ul {
+    display: none;
+  }
+
+  section.header [aria-expanded="true"] .responsive-nav {
+    display: block;
+  }
+
+  [aria-expanded="true"] ~ ul li a {
+    color: var(--font-color-dark);
+    margin-right: var(--size-20);
+  }
+
+  header .btn-default {
+    display: none;
+  }
+
+  /* Brand Section */
+  
+  .brand > div {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .brand-statement { text-align: center; }
+
+  /* Video Demo Section */
+
+  section.small-video-demo { height: fit-content; }
+  
+  .small-video-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .small-video-container .pitch,
+  .small-video-container .thumbnail { margin-top: var(--size-25);}
+
+  .small-video-container .pitch {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .small-video-container .thumbnail {
+    align-self: center;
+    width: 100%;
+  }
+
+  .comments {
+    align-items: center;
+    text-align: center;
+    width: var(--size-600);
+    margin-top: var(--size-100);
+  }
+
+  .featured-review {
+    align-self: center;
+    width: 100%;
+    margin-top: var(--size-25);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Info Footer Section */
+
+  .copyright p { width: 100%; }
+
+}
+
+
+
+@media screen and 
   (min-width: 768px)
   and
   (max-width: 1024px) {
@@ -13,7 +114,7 @@
   /* Header Section */
 
   .background-header {
-    background-image: conic-gradient(from 200deg at 91% 0%, #f3f3f3, var(--primary-shadow));
+    background-image: conic-gradient(from 200deg at 83% 0%, #f3f3f3, var(--primary-shadow));
     padding-bottom: 0;
   }
 
@@ -160,102 +261,7 @@
 
 }
 
-@media screen and 
-(min-width: 360px)
-and
-(max-width: 1024px) {
 
-  /* Header Section */
-  
-  header { margin: 0 var(--size-25)}
-
-  .background-header section.header { margin: 0 auto; }
-
-  section.brand { margin: var(--size-50) auto 0 auto; }
-
-  header nav,
-  .empowered-apps {
-    margin-right: 0;
-  }
-
-  [aria-controls="navbarDropdown"] {
-    display: block;
-  }
-
-  [aria-expanded="false"] ~ ul {
-    display: none;
-  }
-
-  [aria-expanded="true"] ~ ul {
-    position: absolute;
-    right: 0;
-    top: var(--size-50);
-    gap: 0;
-    flex-direction: column;
-  }
-
-  [aria-expanded="true"] ~ ul li a {
-    color: var(--font-color-dark);
-    margin-right: var(--size-20);
-  }
-
-  header .btn-default {
-    display: none;
-  }
-
-  /* Brand Section */
-  
-  .brand > div {
-    flex-direction: column;
-    height: fit-content;
-  }
-
-  .brand-statement { text-align: center; }
-
-  /* Video Demo Section */
-
-  section.small-video-demo { height: fit-content; }
-  
-  .small-video-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .small-video-container .pitch,
-  .small-video-container .thumbnail { margin-top: var(--size-25);}
-
-  .small-video-container .pitch {
-    width: 90%;
-    margin-left: 0;
-  }
-
-  .small-video-container .thumbnail {
-    align-self: center;
-    width: 100%;
-  }
-
-  .comments {
-    align-items: center;
-    text-align: center;
-    width: var(--size-600);
-    margin-top: var(--size-100);
-  }
-
-  .featured-review {
-    align-self: center;
-    width: 100%;
-    margin-top: var(--size-25);
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-
-  /* Info Footer Section */
-
-  .copyright p { width: 100%; }
-
-}
 
 @media screen and 
 (min-width: 360px)
@@ -265,7 +271,11 @@ and
     .container {
       margin: var(--size-15) auto 0 auto;
     }
-    
+
+    .background-header {
+      background-image: conic-gradient(from 190deg at 90% 0%, #f3f3f3, var(--primary-shadow));
+    }
+
     /* Brand Section */
     
     .brand > div { gap: var(--size-25); }
@@ -482,8 +492,6 @@ and
     }
 
     .privacy-policy div:last-child { display: none; }
-
-
 
     /* Info Footer Section */
 

@@ -7,6 +7,17 @@
   z-index: -1;
 }
 
+.background-header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: url('/header-bg.svg');
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 40%;
+  z-index: -5;
+}
+
 section.header { margin-top: 0 }
 
 header {
@@ -50,6 +61,8 @@ header nav ul li:nth-child(2) a, .learn-more a {
 }
 
 header .btn-default { margin-left: var(--size-40); }
+
+.responsive-nav { display: none; }
 
 /* Brand Section */
 
