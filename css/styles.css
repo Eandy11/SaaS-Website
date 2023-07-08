@@ -7,11 +7,7 @@
   z-index: -1;
 }
 
-.background-header section.header {
-  margin: 0 auto;
-}
-
-section.nav-header { width: 100%; }
+section.header { margin-top: 0 }
 
 header {
   display: flex;
@@ -22,6 +18,11 @@ header {
 header nav {
   display: flex;
   align-items: center;
+}
+
+header nav,
+.empowered-apps {
+  margin-right: var(--size-30);
 }
 
 header nav ul {
@@ -301,6 +302,8 @@ header .btn-default { margin-left: var(--size-40); }
   text-align: center;
   display: flex;
   flex-direction: column;
+  font-weight: 500;
+
 }
 
 .line {
@@ -359,7 +362,10 @@ section.trusted-partners { margin-top: var(--size-100); }
 .reviewer-container,
 .comments { display: flex; }
 
-.featured-review { justify-content: space-between; }
+.featured-review { 
+  justify-content: space-between;
+  gap: var(--size-50);
+}
 
 .reviewer-container { 
   width: var(--size-475);
@@ -669,6 +675,8 @@ section.application-form > div::before {
 
 .site-nav div a { color: var(--primary-btn); }
 
+.info-footer footer h3 { color: var(--black); }
+
 .hiring { gap: var(--size-15); }
 
 .hiring button {
@@ -680,9 +688,17 @@ section.application-form > div::before {
   padding: 2px; 
 }
 
-.media-links { 
+.media-links,
+.media-links-container {
   gap: var(--size-20);
+}
+
+.media-links-container {
   height: var(--size-35);
+}
+
+.media-links { 
+  height: 100%;
   align-items: center;
 }
 
@@ -694,7 +710,7 @@ section.application-form > div::before {
 }
 
 .media-links div,
-.media-links select {
+.media-links-container select {
   background-color: var(--primary-shadow);
   border-radius: var(--size-5);
   cursor: pointer;
@@ -715,15 +731,16 @@ section.application-form > div::before {
 }
 
 .media-info > div:first-child,
+.media-links-container,
 .media-links {
   display: flex;
   justify-content: space-between;
 }
 
-.media-links select { 
+.media-links-container select { 
   appearance: none;
   border: none;
-  height: 75%;
+  height: 100%;
   padding-right: var(--size-40);
   padding-left: var(--size-10);
   background-image: url(/angle-down-solid.svg);

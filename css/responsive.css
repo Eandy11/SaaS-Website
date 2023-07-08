@@ -166,8 +166,17 @@ and
 (max-width: 1024px) {
 
   /* Header Section */
-
+  
   header { margin: 0 var(--size-25)}
+
+  .background-header section.header { margin: 0 auto; }
+
+  section.brand { margin: var(--size-50) auto 0 auto; }
+
+  header nav,
+  .empowered-apps {
+    margin-right: 0;
+  }
 
   [aria-controls="navbarDropdown"] {
     display: block;
@@ -240,6 +249,12 @@ and
     align-items: center;
   }
 
+
+
+  /* Info Footer Section */
+
+  .copyright p { width: 100%; }
+
 }
 
 @media screen and 
@@ -247,163 +262,251 @@ and
 and
 (max-width: 768px) {
 
-  .container {
-    margin: var(--size-15) auto 0 auto;
-  }
-  
-  /* Brand Section */
-  
-  .brand > div { gap: var(--size-25); }
+    .container {
+      margin: var(--size-15) auto 0 auto;
+    }
+    
+    /* Brand Section */
+    
+    .brand > div { gap: var(--size-25); }
 
-  .brand-statement { width: var(--size-300); }
+    .brand-statement { width: var(--size-300); }
 
-  .brand-statement h1 { 
-    font-size: var(--size-25);
-    font-weight: 500;
-  }
+    .brand-statement h1 { 
+      font-size: var(--size-25);
+      font-weight: 500;
+    }
 
-  .empowered-apps {
-    height: var(--size-350);
-    width: var(--size-330);
-  }
+    .empowered-apps {
+      height: var(--size-350);
+      width: var(--size-330);
+    }
 
-  .empowered-apps div:nth-child(1) {
-    left: 5%;
-    top: 10%;
-  }
+    .empowered-apps div:nth-child(1) {
+      left: 5%;
+      top: 10%;
+    }
 
-  .empowered-apps div:nth-child(2) {
-    top: 10%;
-    right: 40%;
-  }
-  
-  .empowered-apps div:nth-child(3) {
-    top: 10%;
-    right: 0;
-  }
-  
-  .empowered-apps div:nth-child(4) {
-    top: 36%;
-    left: 5%;
-  }
-  
-  .empowered-apps div:nth-child(5) {
-    top: 36%;
-    right: 20%;
-  }
-  
-  .empowered-apps div:nth-child(6) {
-    top: 65%;
-    right: 48%;
-  }
-  
-  .empowered-apps div:nth-child(7) {
-    top: 69%;
-    right: 4%;
-  }
+    .empowered-apps div:nth-child(2) {
+      top: 10%;
+      right: 40%;
+    }
+    
+    .empowered-apps div:nth-child(3) {
+      top: 10%;
+      right: 0;
+    }
+    
+    .empowered-apps div:nth-child(4) {
+      top: 36%;
+      left: 5%;
+    }
+    
+    .empowered-apps div:nth-child(5) {
+      top: 36%;
+      right: 20%;
+    }
+    
+    .empowered-apps div:nth-child(6) {
+      top: 65%;
+      right: 48%;
+    }
+    
+    .empowered-apps div:nth-child(7) {
+      top: 69%;
+      right: 4%;
+    }
 
-  /* Key Benefits Section */
+    /* Key Benefits Section */
 
-  .key-benefits-heading {
-    width: var(--size-300);
-    margin: var(--size-15) auto 0;
-    font-size: var(--size-20);
-  }
+    .key-benefits-heading {
+      width: var(--size-300);
+      margin: var(--size-15) auto 0;
+      font-size: var(--size-20);
+    }
 
-  .key-benefits-heading div { 
-    font-size: var(--size-15);
-  }
+    .key-benefits-heading div { 
+      font-size: var(--size-15);
+    }
 
-  .cards { flex-direction: column; }
+    .cards { flex-direction: column; }
 
-  /* Product Pitch Section */
+    /* Product Pitch Section */
 
-  .product-pitch > div {
-    width: var(--size-275);
-    margin: var(--size-50) auto var(--size-100);
-  }
+    .product-pitch > div {
+      width: var(--size-275);
+      margin: var(--size-50) auto var(--size-100);
+    }
 
-  .product-pitch-heading { 
-    width: 100%;
-    margin-bottom: var(--size-25);
-  }
+    .product-pitch-heading { 
+      width: 100%;
+      margin-bottom: var(--size-25);
+    }
 
-  .step-outline { flex-direction: column; }
+    .step-outline { flex-direction: column; }
 
-  .step-outline hr { display: none; }
+    .step-outline hr { display: none; }
 
-  .step {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--size-30);
-  }
+    .step {
+      flex-direction: row;
+      align-items: center;
+      gap: var(--size-30);
+    }
 
-  /* Testimony Section */
+    /* Large Video Demo Section */
 
-  .featured-review { flex-direction: column; }
+    .large-video-demo > div {
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 120px;
+    }
 
-  .comments { width: 90%; }
+    /* Testimony Section */
 
-  .reviewer-container {
-    width: 100%;
-    align-items: flex-end;
-    height: 100%;
-    justify-content: flex-end;
-  }
+    .featured-review { flex-direction: column; }
 
-  .reviewer-container img:first-child {
-    max-width: 50%;
-    height: initial;
-  }
+    .comments { width: 90%; }
 
-  .reviewer-container img:last-child {
-    max-width: 90%;
-    position: relative;
-    top: initial;
-    right: initial;
-    padding-bottom: var(--size-55);
-    padding-left: var(--size-15);
-  }
-  
-  /* Trusted Partners Section */
+    .reviewer-container {
+      width: 100%;
+      align-items: flex-end;
+      height: 100%;
+      justify-content: flex-end;
+    }
 
-  section.trusted-partners { margin: var(--size-50) 0; }
+    .reviewer-container img:first-child {
+      max-width: 50%;
+      height: initial;
+    }
 
-  .partners {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--size-25);
-  }
+    .reviewer-container img:last-child {
+      max-width: 90%;
+      position: relative;
+      top: initial;
+      right: initial;
+      padding-bottom: var(--size-55);
+      padding-left: var(--size-15);
+    }
+    
+    /* Trusted Partners Section */
 
-  /* Product Pricing Section */
-  
-  .product-pricing > div {
-    height: var(--size-1250);
-  }
+    section.trusted-partners { margin: var(--size-50) 0; }
 
-  .pricing-overview {
-    flex-direction: column;
-    align-items: center;
-  }
+    .partners {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--size-25);
+    }
 
-  .payment-card {
-    width: 100%;
-    text-align: center;
-  }
+    /* Product Pricing Section */
+    
+    .product-pricing > div {
+      height: var(--size-1250);
+    }
 
-  .payment-card p {
-    text-align: initial;
-    font-size: var(--size-15);
-  }
+    .pricing-overview {
+      flex-direction: column;
+      align-items: center;
+    }
 
-  .payment-card > div div:last-child {
-    font-size: var(--size-12);
-  }
+    .payment-card {
+      width: 100%;
+      text-align: center;
+    }
 
-  .pricing-features {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
+    .payment-card p {
+      text-align: initial;
+      font-size: var(--size-15);
+    }
+
+    .payment-card > div div:last-child {
+      font-size: var(--size-12);
+    }
+
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    /* Application Form Section */
+
+    section.application-form > div {
+      flex-direction: column;
+      height: fit-content;
+      justify-content: initial;
+    }
+
+    .hire-us-pitch, .hire-us-form { height: initial; }
+
+    .hire-us-pitch,
+    .hire-us-form,
+    .hire-us-testimony,
+    .hire-us-testimony .slogan,
+    .hire-us-testimony hr,
+    .bubble-people {
+      width: initial;
+    }
+
+    .hire-us-pitch {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .hire-us-pitch > div {
+      padding: var(--size-25) var(--size-15);
+    }
+
+    .bubble-people {
+      padding: var(--size-25) var(--size-25) 0;
+      margin-top: 0;
+    }
+    
+    .hire-us-form,
+    .hire-us-form > div { padding: var(--size-15); }
+
+    .hire-us-form > div { width: 100%; }
+
+
+    .hire-us-form > div form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-20);
+      grid-template-columns: initial;
+    }
+
+    .hire-us-form > div form .privacy-policy {
+      grid-column: initial;
+      margin-left: var(--size-35);
+      gap: initial;
+    }
+
+    .privacy-policy div:last-child { display: none; }
+
+
+
+    /* Info Footer Section */
+
+    .site-nav,
+    .company.contact,
+    .media-info > div:first-child {
+      align-items: center;
+    }
+
+    .site-nav,
+    .media-info > div:first-child {
+      flex-direction: column;
+    }
+
+    .site-nav { text-align: center; }
+
+    .media-info > div:first-child { gap: var(--size-20); }
+
+    .media-links-container { height: var(--size-75); }
+
+    .media-links-container select {
+      width: 90%;
+      margin: 0 auto;
+    }
+
   }
