@@ -18,9 +18,7 @@ and
     margin: 0 auto; 
   }
 
-  .background-header::after { 
-    bottom: var(--size-150); 
-  }
+  .background-header { padding-bottom: 0; }
 
   section.brand { 
     margin: var(--size-50) auto 0 auto; 
@@ -90,12 +88,14 @@ and
     margin-top: var(--size-100);
   }
 
+  /* Testimony Section */
+
   .featured-review {
-    align-self: center;
     width: 100%;
     margin-top: var(--size-25);
     flex-direction: column;
     align-items: center;
+    gap: 0;
   }
 
   /* Info Footer Section */
@@ -166,14 +166,6 @@ and
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
-  /* video Demo Section */
-
-
-
-  /* Testimony Section */
-
-
 
   /* Trusted Partners Section */
 
@@ -363,40 +355,9 @@ and
       gap: var(--size-30);
     }
 
-    /* Large Video Demo Section */
-
-    .large-video-demo > div {
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 120px;
-    }
-
     /* Testimony Section */
 
-    .featured-review { flex-direction: column; }
-
     .comments { width: 90%; }
-
-    .reviewer-container {
-      width: 100%;
-      align-items: flex-end;
-      height: 100%;
-      justify-content: flex-end;
-    }
-
-    .reviewer-container img:first-child {
-      max-width: 50%;
-      height: initial;
-    }
-
-    .reviewer-container img:last-child {
-      max-width: 90%;
-      position: relative;
-      top: initial;
-      right: initial;
-      padding-bottom: var(--size-55);
-      padding-left: var(--size-15);
-    }
     
     /* Trusted Partners Section */
 
@@ -509,8 +470,6 @@ and
     .site-nav { text-align: center; }
 
     .media-info > div:first-child { gap: var(--size-20); }
-
-    .media-links-container { height: var(--size-75); }
 
     .media-links-container select {
       width: 90%;

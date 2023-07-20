@@ -344,13 +344,13 @@ header .btn-default { margin-left: var(--size-40); }
 /* Large Video Demo Section */
 
 .large-video-demo > div { 
-  background-image: url(/starter-package/banners/banner_two.jpg);
+  background-image: url(../starter-package/banners/banner_two.jpg);
+  aspect-ratio: 12 / 5;
   background-size: cover;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--size-450);
 }
 
 .large-video-demo div a {
@@ -372,7 +372,6 @@ section.trusted-partners { margin-top: var(--size-100); }
 .testimony > div { margin-top: var(--size-50); }
 
 .featured-review,
-.reviewer-container,
 .comments { display: flex; }
 
 .featured-review { 
@@ -381,9 +380,11 @@ section.trusted-partners { margin-top: var(--size-100); }
 }
 
 .reviewer-container { 
-  width: var(--size-475);
-  height: var(--size-500);
   position: relative;
+  max-width: 470px;
+  max-height: 510px;
+  aspect-ratio: 47 / 51;
+  width: 100%;
 }
 
 .reviewer-container img { position: absolute; }
@@ -391,15 +392,16 @@ section.trusted-partners { margin-top: var(--size-100); }
 .reviewer-container img:first-child {
   bottom: 0;
   left: 0;
-  max-height: 75%;
-  width: var(--size-240);
+  aspect-ratio: 6 / 10;
+  max-width: 50%;
   z-index: -5;
 }
 
 .reviewer-container img:last-child {
-  max-height: 90%;
   top: 0;
   right: 0;
+  aspect-ratio: 8 / 9;
+  max-width: 86%;
 }
 
 .comments {
@@ -756,7 +758,7 @@ section.application-form > div::before {
   height: 100%;
   padding-right: var(--size-40);
   padding-left: var(--size-10);
-  background-image: url(/angle-down-solid.svg);
+  background-image: url(../angle-down-solid.svg);
   background-repeat: no-repeat;
   background-position: var(--size-135);
   background-size: 2ch;
