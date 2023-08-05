@@ -71,12 +71,13 @@ header .btn-default { margin-left: var(--size-40); }
   justify-content: space-between;
   align-items: center;
   height: var(--size-450);
+  margin: 0 var(--size-50)
 }
 
 .brand-statement {
   display: inline-flex;
   flex-direction: column;
-  width: var(--size-400);
+  max-width: var(--size-400);
 }
 
 .brand-statement h1 {
@@ -103,8 +104,11 @@ header .btn-default { margin-left: var(--size-40); }
 
 .empowered-apps {
   position: relative;
-  width: var(--size-450);
   height: 100%;
+  max-height: 500px;
+  max-width: 550px;
+  width: 100%;
+  aspect-ratio: 10/11;
 }
 
 .bubble-logo,
@@ -174,10 +178,12 @@ header .btn-default { margin-left: var(--size-40); }
 
 /* Key Benefits Section */
 
-.key-benefits-heading { 
+.key-benefits-heading {
+  max-width: var(--size-300);
+  margin: 0 auto;
+  padding: var(--size-50) 0;
   text-align: center;
   margin-block: 0;
-  margin-bottom: var(--size-15);
   font-size: var(--size-24);
 }
 
@@ -190,7 +196,6 @@ header .btn-default { margin-left: var(--size-40); }
 
 .cards {
   display: flex;
-  margin: var(--size-75) 0;
   gap: var(--size-32);
 }
 
@@ -281,8 +286,8 @@ header .btn-default { margin-left: var(--size-40); }
 /* Product Pitch Section */
 
 .product-pitch > div { 
-  margin-top: var(--size-50);
-  margin-bottom: var(--size-100);
+  width: 100%;
+  margin: var(--size-50) auto var(--size-100);
 }
 
 .product-pitch-heading { 
@@ -316,7 +321,7 @@ header .btn-default { margin-left: var(--size-40); }
   display: flex;
   flex-direction: column;
   font-weight: 500;
-
+  aspect-ratio: 5 /6;
 }
 
 .line {
@@ -324,6 +329,8 @@ header .btn-default { margin-left: var(--size-40); }
   align-items: center;
   gap: var(--size-8);
 }
+
+.line div:last-child { height: 50px; }
 
 .step:nth-child(1) .line hr:first-child,
 .step:nth-child(4) .line hr:last-child { border-color: transparent; }
@@ -412,7 +419,10 @@ section.trusted-partners { margin-top: var(--size-100); }
 }
 
 .comments img,
-.partner-logo { width: var(--size-115); }
+.partner-logo { 
+  max-width: var(--size-115);
+  width: 100%;
+}
 
 .comments p { font-size: var(--size-24); }
 
@@ -442,8 +452,6 @@ section.trusted-partners { margin-top: var(--size-100); }
 }
 
 /* Product Pricing Section */
-
-.product-pricing > div { height: var(--size-600); }
 
 .pricing-overview { 
   display: flex;
@@ -525,17 +533,16 @@ section.application-form > div::before {
 
 .hire-us-pitch > div { padding: 0 var(--size-75); }
 
-.hire-us-testimony { width: 53%; }
+.hire-us-testimony { 
+  max-width: var(--size-500);
+  width: 100%;
+  margin: 0 auto;
+}
 
 .hire-us-testimony h2 { margin-bottom: var(--size-10); }
 
 .hire-us-testimony .slogan { 
   color: var(--font-color-dim);
-}
-
-.hire-us-testimony .slogan,
-.hire-us-testimony hr { 
-  width: var(--size-170);
 }
 
 .hire-us-testimony .slogan,
@@ -548,16 +555,22 @@ section.application-form > div::before {
   height: initial;
 }
 
-.hire-us-pitch > div .testimony-selection,
+.hire-us-pitch > div .testimony-selection {
+  max-width: var(--size-300);
+  width: 100%;
+  margin: var(--size-50) auto 0;
+}
+
 .bubble-people { 
   margin-top: var(--size-50); 
 }
 
 .bubble-people {
   display: flex;
-  width: var(--size-200);
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding-top: var(--size-25);
 }
 
 .bubble-people div { 
@@ -584,7 +597,7 @@ section.application-form > div::before {
 .hire-us-form > div { padding: var(--size-30); }
 
 .hire-us-form > div {
-  height: 100%;
+  width: 100%;
   background: var(--white);
   color: var(--black);
   border-radius: var(--size-15);
@@ -660,23 +673,29 @@ section.application-form > div::before {
 
 /* Info Footer Section */
 
+.info-footer footer {
+  font-size: var(--size-14);
+  font-weight: 500;
+  color: var(--font-color-dim);
+  padding: var(--size-15);
+}
+
 .site-nav,
 .hiring { display: flex; }
 
 .site-nav { justify-content: space-around; }
 
-.site-nav div ul,
+.site-nav .nav-columns div ul,
 .company-contact {
   display: flex;
   flex-direction: column;
   gap: var(--size-10);
 }
 
-.info-footer footer {
-  font-size: var(--size-14);
-  font-weight: 500;
-  color: var(--font-color-dim);
-  padding: var(--size-15);
+.nav-columns {
+  display: flex;
+  gap: var(--size-30);
+  margin-top: var(--size-15);
 }
 
 .info-footer footer hr {

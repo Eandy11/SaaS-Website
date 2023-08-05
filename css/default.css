@@ -77,11 +77,8 @@ html {
 body { margin: 0; }
 
 main {
-  margin-right: var(--size-50);
-  margin-left: var(--size-35);
+  margin: 0 var(--size-35) var(--size-50);
 }
-
-main { margin-bottom: var(--size-50); }
 
 a { 
   text-decoration: none;

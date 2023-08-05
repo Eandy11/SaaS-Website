@@ -167,15 +167,7 @@ and
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Trusted Partners Section */
-
-  .partner-logo {
-    width: var(--size-50);
-  }
-
   /* Product Pricing Section */
-
-  .product-pricing { height: var(--size-950); }
 
   .pricing-overview {
     flex-direction: column;
@@ -221,18 +213,7 @@ and
     align-items: center;
     padding: 0;
     width: 100%;
-  }
-
-  .hire-us-testimony .slogan,
-  .hire-us-testimony blockquote { 
-    width: var(--size-301); 
-  }
-
-  .hire-us-testimony hr { width: initial; }
-
-  .hire-us-pitch > div .testimony-selection,
-  .bubble-people {
-    margin-top: var(--size-25);
+    gap: var(--size-50);
   }
 
   .hire-us-form { 
@@ -272,16 +253,9 @@ and
     
     .brand > div { gap: var(--size-25); }
 
-    .brand-statement { width: var(--size-300); }
-
     .brand-statement h1 { 
       font-size: var(--size-25);
       font-weight: 500;
-    }
-
-    .empowered-apps {
-      height: var(--size-350);
-      width: var(--size-330);
     }
 
     .empowered-apps div:nth-child(1) {
@@ -322,8 +296,6 @@ and
     /* Key Benefits Section */
 
     .key-benefits-heading {
-      width: var(--size-300);
-      margin: var(--size-15) auto 0;
       font-size: var(--size-20);
     }
 
@@ -335,24 +307,9 @@ and
 
     /* Product Pitch Section */
 
-    .product-pitch > div {
-      width: var(--size-275);
-      margin: var(--size-50) auto var(--size-100);
-    }
-
     .product-pitch-heading { 
       width: 100%;
       margin-bottom: var(--size-25);
-    }
-
-    .step-outline { flex-direction: column; }
-
-    .step-outline hr { display: none; }
-
-    .step {
-      flex-direction: row;
-      align-items: center;
-      gap: var(--size-30);
     }
 
     /* Testimony Section */
@@ -371,10 +328,6 @@ and
 
     /* Product Pricing Section */
     
-    .product-pricing > div {
-      height: var(--size-1250);
-    }
-
     .pricing-overview {
       flex-direction: column;
       align-items: center;
@@ -412,9 +365,6 @@ and
 
     .hire-us-pitch,
     .hire-us-form,
-    .hire-us-testimony,
-    .hire-us-testimony .slogan,
-    .hire-us-testimony hr,
     .bubble-people {
       width: initial;
     }
@@ -429,30 +379,14 @@ and
     }
 
     .bubble-people {
-      padding: var(--size-25) var(--size-25) 0;
-      margin-top: 0;
+      padding-top: var(--size-25);
+      margin: 0 auto;
     }
     
     .hire-us-form,
     .hire-us-form > div { padding: var(--size-15); }
 
     .hire-us-form > div { width: 100%; }
-
-
-    .hire-us-form > div form {
-      display: flex;
-      flex-direction: column;
-      gap: var(--size-20);
-      grid-template-columns: initial;
-    }
-
-    .hire-us-form > div form .privacy-policy {
-      grid-column: initial;
-      margin-left: var(--size-35);
-      gap: initial;
-    }
-
-    .privacy-policy div:last-child { display: none; }
 
     /* Info Footer Section */
 
@@ -467,13 +401,60 @@ and
       flex-direction: column;
     }
 
-    .site-nav { text-align: center; }
-
     .media-info > div:first-child { gap: var(--size-20); }
 
     .media-links-container select {
       width: 90%;
       margin: 0 auto;
+    }
+
+  }
+
+
+  @media screen and 
+  (min-width: 360px)
+  and
+  (max-width: 600px) {
+
+    .step-outline { flex-direction: column; }
+
+    .step-outline hr { display: none; }
+        
+    .step {
+      flex-direction: row;
+      align-items: center;
+      gap: var(--size-30);
+      aspect-ratio: initial;
+      width: var(--size-300);
+    }
+
+    .nav-columns { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+
+
+  @media screen and 
+  (min-width: 360px)
+  and
+  (max-width: 500px) {
+
+    .hire-us-form > div form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-20);
+      grid-template-columns: initial;
+    }
+
+    .privacy-policy div:last-child { 
+      display: none; 
+    }
+
+    .nav-columns {
+      display: flex;
+      flex-direction: column;
     }
 
   }
