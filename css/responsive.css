@@ -236,10 +236,10 @@ and
 
 
 
-@media screen and 
-(min-width: 360px)
-and
-(max-width: 768px) {
+@media screen and
+  (min-width: 360px)
+  and 
+  (max-width: 768px) {
 
     .container {
       margin: var(--size-15) auto 0 auto;
@@ -393,11 +393,12 @@ and
     .media-info > div:first-child {
       flex-direction: column;
     }
-  
+
     .company-contact { 
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      gap: var(--size-50);
   }
 
     .media-info > div:first-child { gap: var(--size-20); }
@@ -410,21 +411,19 @@ and
   }
 
 
-  @media screen and 
-  (min-width: 360px)
-  and
-  (max-width: 600px) {
+  @media screen and (max-width: 600px) {
 
-    .step-outline { flex-direction: column; }
+    .step-outline { 
+      flex-wrap: wrap;
+    }
 
-    .step-outline hr { display: none; }
+    .step hr { display: none; }
         
     .step {
       flex-direction: row;
       align-items: center;
-      gap: var(--size-30);
-      aspect-ratio: initial;
-      width: var(--size-300);
+      gap: var(--size-15);
+      width: var(--size-250);
     }
 
   }
@@ -439,6 +438,8 @@ and
     .privacy-policy div:last-child { 
       display: none; 
     }
+
+    .company-contact { gap: var(--size-10); }
 
     .nav-columns {
       display: flex;

@@ -295,14 +295,8 @@ header .btn-default { margin-left: var(--size-40); }
 .step-outline {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
-.step-outline hr {
-  border-color: var(--primary-shadow);
-  flex: 1;
-  display: flex;
-}
 
 .step { 
   width: 100%;
@@ -310,7 +304,11 @@ header .btn-default { margin-left: var(--size-40); }
   display: flex;
   flex-direction: column;
   font-weight: 500;
-  aspect-ratio: 5 /6;
+}
+
+.step hr {
+  border-color: var(--primary-shadow);
+  flex: 1;
 }
 
 .line {
