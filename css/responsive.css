@@ -320,12 +320,6 @@ and
 
     section.trusted-partners { margin: var(--size-50) 0; }
 
-    .partners {
-      flex-direction: column;
-      align-items: center;
-      gap: var(--size-25);
-    }
-
     /* Product Pricing Section */
     
     .pricing-overview {
@@ -349,7 +343,6 @@ and
 
     .pricing-features {
       display: flex;
-      flex-direction: column;
       width: 100%;
     }
 
@@ -400,6 +393,12 @@ and
     .media-info > div:first-child {
       flex-direction: column;
     }
+  
+    .company-contact { 
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
 
     .media-info > div:first-child { gap: var(--size-20); }
 
@@ -428,28 +427,13 @@ and
       width: var(--size-300);
     }
 
-    .nav-columns { 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
   }
 
 
-  @media screen and 
-  (min-width: 360px)
-  and
-  (max-width: 500px) {
+  @media screen and (max-width: 360px) {
 
     .background-header {
       background-image: conic-gradient(from 190deg at 60% 70%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);
-    }
-
-    .hire-us-form > div form {
-      display: flex;
-      flex-direction: column;
-      gap: var(--size-20);
-      grid-template-columns: initial;
     }
 
     .privacy-policy div:last-child { 

@@ -437,7 +437,9 @@ section.trusted-partners { margin-top: var(--size-100); }
 
 .partners { 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: var(--size-25);
 }
 
 /* Product Pricing Section */
@@ -481,9 +483,11 @@ footer hr {
 .payment-card > div div:last-child { padding-top: var(--size-5); }
 
 .pricing-features { 
-  display: grid;
-  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.pricing-features, .payment-card { width: 50%; }
 
 .pricing-features div { box-shadow: none; }
 
@@ -602,7 +606,7 @@ section.application-form > div::before {
 
 .hire-us-form > div form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(25%, 50%) minmax(25%, 50%);
   grid-gap: var(--size-20);
 }
 
@@ -644,8 +648,8 @@ section.application-form > div::before {
 }
 
 .hire-us-form > div form .privacy-policy {
-  grid-column: 1 / 3;
   display: flex;
+  flex-wrap: wrap;
   margin-left: var(--size-40);
   gap: var(--size-30);
 }
@@ -672,7 +676,10 @@ section.application-form > div::before {
 .site-nav,
 .hiring { display: flex; }
 
-.site-nav { justify-content: space-around; }
+.site-nav { 
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
 .site-nav .nav-columns div ul,
 .company-contact {
@@ -681,10 +688,29 @@ section.application-form > div::before {
   gap: var(--size-10);
 }
 
+.company-contact {
+  text-align: left;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.company-contact > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-5);
+}
+
+
 .nav-columns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: var(--size-30);
   margin-top: var(--size-15);
+}
+
+.nav-columns > div h3 {
+  margin-bottom: 15px;
 }
 
 .info-footer footer hr {
