@@ -1,128 +1,11 @@
-@media only screen and (max-width: 1024px) {
-  section.brand .content {
-    height: 900px;
-    flex-direction: column;
-  }
-}
-
-@media screen and 
-(min-width: 360px)
-and
-(max-width: 1024px) {
-
-  /* Header Section */
-  
-  header { margin: 0 var(--size-25)}
-
-  .background-header section.header { 
-    margin: 0 auto; 
-  }
-
-  .background-header { padding-bottom: 0; }
-
-  section.brand { 
-    margin: var(--size-50) auto 0 auto; 
-  }
-
-  header nav,
-  .empowered-apps {
-    margin-right: 0;
-  }
-
-  [aria-controls="navbarDropdown"] {
-    display: block;
-  }
-
-  [aria-expanded="false"] ~ ul {
-    display: none;
-  }
-
-  section.header [aria-expanded="true"] .responsive-nav {
-    display: block;
-  }
-
-  [aria-expanded="true"] ~ ul li a {
-    color: var(--font-color-dark);
-    margin-right: var(--size-20);
-  }
-
-  header .btn-default {
-    display: none;
-  }
+@media screen and (max-width: 1023px) {
 
   /* Brand Section */
+  
+  .background-header { height: auto; }
   
   .brand > div {
-    flex-direction: column;
     height: fit-content;
-  }
-
-  .brand-statement { text-align: center; }
-
-  /* Video Demo Section */
-
-  section.small-video-demo { height: fit-content; }
-  
-  .small-video-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .small-video-container .pitch,
-  .small-video-container .thumbnail { margin-top: var(--size-25);}
-
-  .small-video-container .pitch {
-    width: 90%;
-    margin-left: 0;
-  }
-
-  .small-video-container .thumbnail {
-    align-self: center;
-    width: 100%;
-  }
-
-  .comments {
-    align-items: center;
-    text-align: center;
-    width: var(--size-600);
-    margin-top: var(--size-100);
-  }
-
-  /* Testimony Section */
-
-  .featured-review {
-    width: 100%;
-    margin-top: var(--size-25);
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  /* Info Footer Section */
-
-  .copyright p { width: 100%; }
-
-}
-
-
-
-@media screen and 
-  (min-width: 768px)
-  and
-  (max-width: 1024px) {
-
-  /* Header Section */
-
-  .background-header {
-    background-image: conic-gradient(from 200deg at 70% 50%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);
-    padding-bottom: 0;
-  }
-
-  /* Brand Section */
-
-  .empowered-apps {
-    height: var(--size-500);
-    width: var(--size-550);
   }
 
   .empowered-apps div:nth-child(1) {
@@ -159,7 +42,7 @@ and
     top: 69%;
     right: 2%;
   }
-
+  
   /* Key Benefits Section */
 
   .cards {
@@ -167,86 +50,37 @@ and
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Product Pricing Section */
-
-  .pricing-overview {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .payment-card,
-  .pricing-features { width: 100%; }
-
-  .payment-card > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--size-13);
-    padding: 40px;
-  }
-
-  .payment-card hr {
-    display: flex;
-    width: 100%;
-  }
-
-  .payment-card p { font-size: var(--size-18); }
-
-  .payment-card > div div:last-child { 
-    text-align: center;
-  }
-
-/* Application Form Section */
-
-  section.application-form > div {
-    width: initial;
-    flex-direction: column;
-    padding: var(--size-40) var(--size-25);
-    height: var(--size-900);
-  }
-  
-  .hire-us-pitch { width: 100%; }
-
-  .hire-us-pitch > div { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    width: 100%;
-    gap: var(--size-50);
-  }
-
-  .hire-us-form { 
-    width: 100%;
-    padding: 0;
-  }
-
-  .hire-us-form > div form button {
-    margin: var(--size-15) auto 0;
-  }
-
-/* Info Footer Section */
-
-  .copyright p { 
-    width: var(--size-650);
-    margin: var(--size-20) auto 0;
-  }
-
 }
 
-
-
-@media screen and
-  (min-width: 360px)
-  and 
-  (max-width: 768px) {
-
-    .container {
-      margin: var(--size-15) auto 0 auto;
-    }
+@media screen and (max-width: 768px) {
 
     .background-header {
       background-image: conic-gradient(from 200deg at 70% 45%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);
+    }
+
+    .brand > div { flex-direction: column; }
+
+    .brand-statement { text-align: center; }
+    
+    [aria-controls="navbarDropdown"] {
+      display: block;
+    }
+
+    [aria-expanded="false"] ~ ul {
+      display: none;
+    }
+
+    section.header [aria-expanded="true"] .responsive-nav {
+      display: block;
+    }
+
+    [aria-expanded="true"] ~ ul li a {
+      color: var(--font-color-dark);
+      margin-right: var(--size-20);
+    }
+    
+    header .btn-default {
+      display: none;
     }
 
     /* Brand Section */
@@ -303,8 +137,18 @@ and
       font-size: var(--size-15);
     }
 
-    .cards { flex-direction: column; }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
+    /* Video Demo Section */
+
+    .small-video-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
     /* Product Pitch Section */
 
     .product-pitch-heading { 
@@ -314,7 +158,22 @@ and
 
     /* Testimony Section */
 
-    .comments { width: 90%; }
+    .comments {
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      margin-top: var(--size-100);
+    }
+  
+    /* Testimony Section */
+  
+    .featured-review {
+      width: 100%;
+      margin-top: var(--size-25);
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
     
     /* Trusted Partners Section */
 
@@ -327,48 +186,43 @@ and
       align-items: center;
     }
 
-    .payment-card {
-      width: 100%;
-      text-align: center;
-    }
+    .payment-card { text-align: center; }
 
     .payment-card p {
       text-align: initial;
-      font-size: var(--size-15);
+      font-size: var(--size-18);
     }
 
-    .payment-card > div div:last-child {
-      font-size: var(--size-12);
-    }
+    .pricing-features { display: flex; }
 
-    .pricing-features {
+    .payment-card,
+    .pricing-features { width: 100%; }
+  
+    .payment-card > div {
       display: flex;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      font-size: var(--size-13);
+      padding: var(--size-40);
     }
 
     /* Application Form Section */
 
     section.application-form > div {
+      width: initial;
       flex-direction: column;
       height: fit-content;
-      justify-content: initial;
+      padding: var(--size-40) var(--size-25);
     }
-
-    .hire-us-pitch, .hire-us-form { height: initial; }
+    
+    .hire-us-form { 
+      width: 100%;
+    }
 
     .hire-us-pitch,
     .hire-us-form,
     .bubble-people {
-      width: initial;
-    }
-
-    .hire-us-pitch {
-      text-align: center;
-      justify-content: center;
-    }
-
-    .hire-us-pitch > div {
-      padding: var(--size-25) var(--size-15);
+      width: 100%;
     }
 
     .bubble-people {
@@ -398,15 +252,12 @@ and
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: var(--size-50);
+      column-gap: var(--size-50);
   }
 
     .media-info > div:first-child { gap: var(--size-20); }
 
-    .media-links-container select {
-      width: 90%;
-      margin: 0 auto;
-    }
+    .media-links-container select { margin: 0 auto; }
 
   }
 
@@ -425,6 +276,16 @@ and
       gap: var(--size-15);
       width: var(--size-250);
     }
+    
+    .cards { 
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hire-us-pitch > div { 
+      flex-direction: column;
+      text-align: center;
+    }
 
   }
 
@@ -433,6 +294,12 @@ and
 
     .background-header {
       background-image: conic-gradient(from 190deg at 60% 70%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);
+    }
+
+    .payment-card p { font-size: var(--size-15); }
+    
+    .payment-card > div div:last-child {
+      font-size: var(--size-12);
     }
 
     .privacy-policy div:last-child { 
@@ -445,5 +312,7 @@ and
       display: flex;
       flex-direction: column;
     }
+
+    .hire-us-pitch { text-align: center; }
 
   }
