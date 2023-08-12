@@ -1,54 +1,99 @@
 @media screen and (max-width: 1023px) {
 
+  .container { margin: var(--size-50) var(--size-35); }
+
+  section.brand,
+  section.application-form { 
+    margin: var(--size-50) 0;
+  }
+
+
   /* Brand Section */
-  
-  .background-header { height: auto; }
   
   .brand > div {
     height: fit-content;
   }
 
-  .empowered-apps div:nth-child(1) {
-    left: 5%;
-    top: 10%;
-  }
-
-  .empowered-apps div:nth-child(2) {
-    top: 10%;
-    right: 50%;
-  }
-  
-  .empowered-apps div:nth-child(3) {
-    top: 10%;
-    right: 0;
-  }
-  
-  .empowered-apps div:nth-child(4) {
-    top: 36%;
-    left: 5%;
-  }
-  
-  .empowered-apps div:nth-child(5) {
-    top: 36%;
-    right: 22%;
-  }
-  
-  .empowered-apps div:nth-child(6) {
-    top: 63%;
-    right: 63%;
-  }
-  
-  .empowered-apps div:nth-child(7) {
-    top: 69%;
-    right: 2%;
-  }
-  
   /* Key Benefits Section */
 
   .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
   }
+
+  .card { width: 45%; }
+
+  /* Product Pricing Section */
+
+  
+  .pricing-overview {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-card { text-align: center; }
+  
+  .payment-card p {
+    text-align: initial;
+    font-size: var(--size-18);
+  }
+  
+  .payment-card,
+  .pricing-features { width: 100%; }
+  
+  .pricing-features { 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .payment-card > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--size-13);
+    padding: var(--size-40);
+  }
+
+  section.application-form > div {
+    width: initial;
+    flex-direction: column;
+    height: fit-content;
+    padding: var(--size-40) var(--size-25);
+  }
+
+  .hire-us-pitch > div { 
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .hire-us-form { 
+    width: 100%;
+  }
+
+  .hire-us-pitch,
+  .hire-us-form,
+  .bubble-people {
+    width: 100%;
+  }
+
+  .hire-us-testimony hr {
+    max-width: none;
+  }
+  .hire-us-testimony, 
+  .hire-us-testimony h2,
+  .hire-us-testimony .slogan { 
+    max-width: var(--size-500);
+  }
+
+
+  .testimony-selection { 
+    max-width: var(--size-300);
+  }
+
+  .hire-us-form,
+  .hire-us-form > div { padding: var(--size-15); }
+
+  .hire-us-form > div { width: 100%; }
 
 }
 
@@ -56,11 +101,15 @@
 
     .background-header {
       background-image: conic-gradient(from 200deg at 70% 45%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);
+      height: auto;
     }
 
     .brand > div { flex-direction: column; }
 
-    .brand-statement { text-align: center; }
+    .brand-statement { 
+      text-align: center;
+      align-items: center;
+    }
     
     [aria-controls="navbarDropdown"] {
       display: block;
@@ -88,8 +137,8 @@
     .brand > div { gap: var(--size-25); }
 
     .brand-statement h1 { 
-      font-size: var(--size-25);
-      font-weight: 500;
+      font-size: var(--size-40);
+      font-weight: 400;
     }
 
     .empowered-apps div:nth-child(1) {
@@ -137,11 +186,6 @@
       font-size: var(--size-15);
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
     /* Video Demo Section */
 
     .small-video-container {
@@ -162,10 +206,8 @@
       align-items: center;
       text-align: center;
       width: 90%;
-      margin-top: var(--size-100);
+      margin-top: var(--size-25);
     }
-  
-    /* Testimony Section */
   
     .featured-review {
       width: 100%;
@@ -174,66 +216,13 @@
       align-items: center;
       gap: 0;
     }
-    
+
     /* Trusted Partners Section */
 
-    section.trusted-partners { margin: var(--size-50) 0; }
-
-    /* Product Pricing Section */
-    
-    .pricing-overview {
+    .partners {
       flex-direction: column;
       align-items: center;
     }
-
-    .payment-card { text-align: center; }
-
-    .payment-card p {
-      text-align: initial;
-      font-size: var(--size-18);
-    }
-
-    .pricing-features { display: flex; }
-
-    .payment-card,
-    .pricing-features { width: 100%; }
-  
-    .payment-card > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: var(--size-13);
-      padding: var(--size-40);
-    }
-
-    /* Application Form Section */
-
-    section.application-form > div {
-      width: initial;
-      flex-direction: column;
-      height: fit-content;
-      padding: var(--size-40) var(--size-25);
-    }
-    
-    .hire-us-form { 
-      width: 100%;
-    }
-
-    .hire-us-pitch,
-    .hire-us-form,
-    .bubble-people {
-      width: 100%;
-    }
-
-    .bubble-people {
-      padding-top: var(--size-25);
-      margin: 0 auto;
-    }
-    
-    .hire-us-form,
-    .hire-us-form > div { padding: var(--size-15); }
-
-    .hire-us-form > div { width: 100%; }
 
     /* Info Footer Section */
 
@@ -276,21 +265,28 @@
       gap: var(--size-15);
       width: var(--size-250);
     }
-    
+
     .cards { 
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
+
+    .card { width: 100%; }
+
+    .hire-us-pitch { margin-left: 0; }
 
     .hire-us-pitch > div { 
       flex-direction: column;
       text-align: center;
     }
 
+    .bubble-people { margin: 0 auto; }
+
   }
 
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 375px) {
 
     .background-header {
       background-image: conic-gradient(from 190deg at 60% 70%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);

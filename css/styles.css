@@ -2,7 +2,7 @@
 
 .background-header {
   position: relative;
-  background-image: conic-gradient(from 200deg at 59% 80%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);
+  background-image: conic-gradient(from 200deg at 63% 85%, white 0% 17%, #f3f3f3 17% 50%, var(--primary-shadow) 50% 67%, white 67% 100%);
   z-index: -1;
   height: 700px;
 }
@@ -58,18 +58,21 @@ header .btn-default { margin-left: var(--size-40); }
   justify-content: space-between;
   align-items: center;
   height: var(--size-450);
-  margin: 0 var(--size-50)
+  margin: var(--size-50) var(--size-25);
 }
 
 .brand-statement {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   max-width: var(--size-400);
 }
 
+.brand-statement h1,
+.brand-statement > div { width: 90%; }
+
 .brand-statement h1 {
   font-size: var(--size-50);
-  font-weight: 400;
+  font-weight: 600;
   margin-block: 0;
   margin-bottom: var(--size-10);
 }
@@ -91,9 +94,7 @@ header .btn-default { margin-left: var(--size-40); }
 
 .empowered-apps {
   position: relative;
-  height: 100%;
-  max-height: 500px;
-  max-width: 550px;
+  max-width: var(--size-450);
   width: 100%;
   aspect-ratio: 10/11;
 }
@@ -169,10 +170,8 @@ section.key-benefits { margin-top: 0; }
 
 .key-benefits-heading {
   max-width: var(--size-300);
-  margin: 0 auto;
-  padding: var(--size-50) 0;
+  margin: 0 auto var(--size-50);
   text-align: center;
-  margin-block: 0;
   font-size: var(--size-24);
 }
 
@@ -186,14 +185,12 @@ section.key-benefits { margin-top: 0; }
 .cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: var(--size-32);
 }
 
 .card {
   text-align: left;
   border-radius: 2px;
-  position: relative;
 }
 
 .key-benefits .cards .card:hover {
@@ -360,7 +357,7 @@ section.small-video-demo/*  */ {
 /* Testimony Section */
 
 section.testimony,
-section.trusted-partners { margin-top: var(--size-100); }
+section.trusted-partners { margin-top: var(--size-75); }
 
 .testimony > div { margin-top: var(--size-50); }
 
@@ -401,7 +398,7 @@ section.trusted-partners { margin-top: var(--size-100); }
   width: var(--size-500);
   flex-direction: column;
   justify-content: center;
-  gap: var(--size-50);
+  gap: var(--size-25);
 }
 
 .comments img,
@@ -478,17 +475,14 @@ footer hr {
 
 .payment-card > div div:last-child { padding-top: var(--size-5); }
 
-.pricing-features { 
-  display: flex;
-  flex-wrap: wrap;
-}
+.pricing-features { display: grid; }
 
 .pricing-features, 
 .payment-card { 
   width: 50%;
 }
 
-.pricing-features div { box-shadow: none; }
+.pricing-features .card { box-shadow: none; }
 
 .pricing-features .card:nth-child(1) { grid-area: 1 / 1; }
 
@@ -504,6 +498,7 @@ section.application-form > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: var(--size-100);
   color: var(--white);
   background-color: navy;
 }
@@ -516,19 +511,26 @@ section.application-form > div {
   height: 100%;
 }
 
+.hire-us-pitch { margin-left: var(--size-50); }
+
 .hire-us-pitch > div { 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
   gap: var(--size-50);
   width: 100%;
 }
 
+.hire-us-testimony h2,
+.hire-us-testimony .slogan,
+.hire-us-testimony hr,
+.bubble-people {
+  max-width: var(--size-200);
+}
+
 .hire-us-testimony,
 .testimony-selection { width: 100%; }
-
-.hire-us-testimony { max-width: var(--size-500); }
 
 .hire-us-testimony h2 { 
   margin-bottom: var(--size-10);
@@ -547,12 +549,6 @@ section.application-form > div {
 .hire-us-testimony hr { 
   margin: var(--size-25) 0;
   height: initial;
-}
-
-.testimony-selection { max-width: var(--size-300); }
-
-.bubble-people { 
-  margin-top: var(--size-50); 
 }
 
 .bubble-people {
